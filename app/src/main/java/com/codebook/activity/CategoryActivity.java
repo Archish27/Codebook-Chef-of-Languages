@@ -14,6 +14,7 @@ import java.util.ArrayList;
 public class CategoryActivity extends AppCompatActivity {
     private static final String TAG = "Main Activity";
     DatabaseHelper databaseHelper;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
