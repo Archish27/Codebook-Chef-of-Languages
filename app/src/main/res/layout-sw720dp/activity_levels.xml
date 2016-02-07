@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.codebook.views.ParallaxScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/levelsScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/scrollCatInfoContainer"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/ivCatIcon"
+                android:layout_width="2500dp"
+                android:layout_height="250dp"
+                android:layout_marginBottom="50dp"
+                android:layout_marginTop="100dp"
+                 />
+
+            <TextView
+                android:id="@+id/tvCatName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="50dp"
+                android:layout_marginTop="50dp"
+                android:text="New Text"
+                android:textColor="@color/text_color"
+                android:textSize="120sp" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/levels_container"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1" />
+    </LinearLayout>
+</com.codebook.views.ParallaxScrollView>

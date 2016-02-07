@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">CodeBook</string>
+    <string name="action_settings">Settings</string>
+    <string name="tagline">Chef of Languages</string>
+    <string name="instructions">Your score will be based on time and attempts.\nGetting all questions correct will help clear the level.\nMake sure to clear the level in 1 go!\nGood Luck!</string>
+    <string name="start">Start</string>
+    <string name="categories">Categories</string>
+    <string name="total_attempted">Total Attempted</string>
+    <string name="total_correct">Total Correct</string>
+    <string name="continue_name">Continue</string>
+</resources>

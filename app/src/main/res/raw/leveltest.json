@@ -1,0 +1,2245 @@
+[
+  {
+    "CAT_ID": 1,
+    "CAT_NAME": "C Programming",
+    "LEVELS": [
+      {
+        "LEVEL_ID": 1,
+        "LEVEL_NAME": "Practical",
+        "LOCK_STATUS": 0,
+        "QUESTIONS": [
+          {
+            "Q_ID": 1,
+            "Q_TEXT": "HCF and LCM",
+            "Q_PRGM": "#include \\nint main()\\n{\\n\\tint a, b, x, y, t, gcd, lcm;\\n\\tprintf(\"Enter two integers\");\\n\\tscanf(\"%d%d\", &x, &y);\\n\\n\\ta = x;\\n\\t b = y;\\n\\n\\twhile (b != 0) \\n{\\n\\tt = b;\\n\\tb = a % b;\\n\\ta = t;\\n}\\ngcd = a;\\nlcm = (x*y)/gcd;\\nprintf(\"Greatest common divisor of %d and %d = %d\", x, y, gcd);\\nprintf(\"Least common multiple of %d and %d = %d\", x, y,   lcm);\\nreturn 0;\\n}",
+            "OPT_A": "Enter two integers\\n9\\n24\\nGreatest common divisor of 9 and 24 = 3\\nLeast common multiple of 9 and 24 = 72",
+            "OPT_B": "A",
+            "OPT_C": "A",
+            "OPT_D": "A",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 2,
+            "Q_TEXT": "Factorial",
+            "Q_PRGM": "#include <stdio.h>\\nint main()\\n{\\n\\tint c, n, fact = 1;\\n\\tprintf(\"Enter a number to calculate it's factorial\");\\n\\tscanf(\"%d\", &n);\\n\\tfor (c = 1; c <= n; c++)\\n\\t{\\n\\t\\tfact = fact * c;\\n\\t}\\n\\tprintf(\"Factorial of %d = %d\", n, fact);\\n\\treturn 0;\\n}",
+            "OPT_A": "Enter a number to calculate it's factorial\\n5\\nFactorial of 5 = 120",
+            "OPT_B": "A",
+            "OPT_C": "A",
+            "OPT_D": "A",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 3,
+            "Q_TEXT": "To check odd or even",
+            "Q_PRGM": "#include <stdio.h>\\nint main()\\n{\\n\\tint n;\\n\\tprintf(\"Enter an integer\");\\n\\t\\tscanf(\"%d\",&n);\\n\\t\\tif (n%2 == 0)\\n\\t\\tprintf(\"Even\");\\n\\t\\telse\\n\\t\\tprintf(\"Odd\");\\n\\t\\treturn 0;\\n}",
+            "OPT_A": "Enter an integer\\n5\\nOdd",
+            "OPT_B": "A",
+            "OPT_C": "A",
+            "OPT_D": "A",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 4,
+            "Q_TEXT": "To perform addition,subtraction,multiplication and division",
+            "Q_PRGM": "#include <stdio.h>\\nint main()\\n{\\n\\tint first, second, add, subtract, multiply;\\n\\tfloat divide;\\n\\tprintf(\"Enter two integers\");\\n\\tscanf(\"%d%d\", &first, &second);\\n\\tadd = first + second;\\n\\tsubtract = first - second;\\n\\t\\n\\tmultiply = first * second;\\n\\tdivide = first / (float)second;\\n\\tprintf(\"Sum = %d\n\",add);\\n\\tprintf(\"Difference = %d\n\",subtract);\\n\\tprintf(\"Multiplication = %d\n\",multiply);\\n\\tprintf(\"Division = %.2f\n\",divide);\\n\\treturn 0;\\n}",
+            "OPT_A": "Enter two integers\\n7 3\\nSum=10\\nDifference=4\\nMultiplication=21\\nDivision=2.33",
+            "OPT_B": "A",
+            "OPT_C": "A",
+            "OPT_D": "A",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 5,
+            "Q_TEXT": "To check whether input alphabet is a vowel or not",
+            "Q_PRGM": "#include<stdio.h>\\nint main()\\n{\\n\\\tchar ch;\\n\\tprintf(\"Enter a character\n\");\\n\\tscanf(\"%c\", &ch);\\n\\tif (ch == 'a' || ch == 'A' || ch == 'e' || ch == 'E' || ch ==    'i' || ch == 'I' || ch =='o' || ch=='O' || ch == 'u' || ch ==  'U')\\n\\t\\tprintf(\"%c is a vowel.\n\", ch);\\n\\telse\\n\\tprintf(\"%c is not a vowel.\n\", ch);\\n\\treturn 0;\\n}",
+            "OPT_A": "Enter a character\\nR\\nR is not a vowel.\\n",
+            "OPT_B": "A",
+            "OPT_C": "A",
+            "OPT_D": "A",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 6,
+            "Q_TEXT": "To check leap year",
+            "Q_PRGM": "#include <stdio.h>\\nint main()\\n{\\n\\tint year;\\n\\tprintf(\"Enter a year to check if it is a leap year\n\");\\n\\tscanf(\"%d\", &year);\\nif ( year%400 == 0)\\n\\tprintf(\"%d is a leap year.\n\", year);\\nelse if ( year%100 == 0)\\n\\tprintf(\"%d is not a leap year.\n\", year);\\n\\telse if ( year%4 == 0 )\\n\\tprintf(\"%d is a leap year.\n\", year);\\nelse\\n\\tprintf(\"%d is not a leap year.\n\", year);\\nreturn 0;\\n}",
+            "OPT_A": "Enter a year to check if it is a leap year\\n2016\\n2016 is a leap year.",
+            "OPT_B": "A",
+            "OPT_C": "A",
+            "OPT_D": "A",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 7,
+            "Q_TEXT": "Add digits of number",
+            "Q_PRGM": "#include <stdio.h>\\nint main()\\n{\\n\\tint n, t, sum = 0, remainder;\\n\\tprintf(\"Enter an integer\n\");\\n\\tscanf(\"%d\", &n);\\n\\tt = n;while (t != 0)\\n\\t{\\n\\t\\tremainder = t % 10;\\n\\t\\tsum=sum + remainder;\\n\\t\\tt = t / 10;\\n\\t}\\n\\tprintf(\"Sum of digits of %d = %d\n\", n, sum);\\nreturn 0;\\n}",
+            "OPT_A": "Enter an integer\\n1234\\nSum of digits of 1234=10",
+            "OPT_B": "A",
+            "OPT_C": "A",
+            "OPT_D": "A",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 8,
+            "Q_TEXT": "Decimal to binary conversion",
+            "Q_PRGM": "#include <stdio.h>\\nint main()\\n{\\n\\tint n, c, k;\\n\\tprintf(\"Enter an integer in decimal number system\n\");\\n\\tscanf(\"%d\", &n);  printf(\"%d in binary number system is:\n\",n);\\nfor (c = 31; c >= 0; c--)\\n{\\n\\tk = n >> c;\\n\\tif (k & 1)\\n\\t\\tprintf(\"1\");\\n\\telse\\n\\t\\tprintf(\"0\");\\n\\t}\\n\\tprintf(\"\n\");\\n\\treturn 0;\\n}",
+            "OPT_A": "Enter an integer in decimal number system\\n100\\n100 in binary number system is 1100100.\\n",
+            "OPT_B": "A",
+            "OPT_C": "A",
+            "OPT_D": "A",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 9,
+            "Q_TEXT": "To find nCr and nPr",
+            "Q_PRGM": "#include <stdio.h>\\nlong factorial(int);\\nlong find_ncr(int, int);\\nlong find_npr(int, int);\\nint main()\\n{\\n\\tint n, r;\\n\\tlong ncr, npr;\\n\\tprintf(\"Enter the value of n and r\n\");\\n\\tscanf(\"%d%d\",&n,&r);\\n\\tncr = find_ncr(n, r);\\n\\tnpr = find_npr(n, r);\\n\\tprintf(\"%dC%d = %ld\n\", n, r, ncr);\\n\\tprintf(\"%dP%d = %ld\n\", n, r, npr);\\n\\treturn 0;\\n}\\nlong find_ncr(int n, int r)\\n{\\n\\tlong result;\\n\\tresult = factorial(n)/(factorial(r)*factorial(n-r));\\n\\treturn result;\\n}\\n\\tlong find_npr(int n, int r)\\n{\\n\\tlong result;\\n\\tresult = factorial(n)/factorial(n-r);\\n\\treturn result;\\n}\\n\\tlong factorial(int n)\\n\\t{\\n\\t\\tint c;\\n\\t\\tlong result = 1;\\n\\t\\tfor (c = 1; c <= n; c++)\\n\\t\\t\\tresult = result*c;\\n\\treturn result;\\n}",
+            "OPT_A": "Enter the value of n and r\\n5\\n2\\n5C2=10\\n5P2=20",
+            "OPT_B": "A",
+            "OPT_C": "A",
+            "OPT_D": "A",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 10,
+            "Q_TEXT": "To swap two numbers",
+            "Q_PRGM": "#include <stdio.h>\\nint main()\\n{\\n\\tint x, y, temp;\\n\\tprintf(\"Enter the value of x and y\n\");\\n\\tscanf(\"%d%d\", &x, &y);\\n\\tprintf(\"Before Swapping\nx = %d\ny = %d\n\",x,y);\\n\\ttemp=x;\\n\\tx=y;\\n\\ty=temp;\\n\\tprintf(\"After Swapping\nx = %d\ny = %d\n\",x,y);\\n\\treturn 0;\\n}",
+            "OPT_A": "Enter the value of x and y\\n5\\n10\\nBefore Swapping\\nx=5\\ny=10\\nAfter Swapping\\nx=10\\ny=5",
+            "OPT_B": "A",
+            "OPT_C": "A",
+            "OPT_D": "A",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 11,
+            "Q_TEXT": "To reverse a number",
+            "Q_PRGM": "#include <stdio.h>\\nint main()\\n{\\n\\tint n, reverse = 0;\\n\\tprintf(\"Enter a number to reverse\n\");\\n\\tscanf(\"%d\", &n);\\n\\twhile (n != 0)\\n\\t{\\n\\t\\treverse = reverse * 10;\\n\\t\\treverse = reverse + n%10;\\n\\t\\tn = n/10;\\n\\t}\\n\\tprintf(\"Reverse of entered number is = %d\n\", reverse);\\n\\treturn 0;\\n}",
+            "OPT_A": "Enter a number to reverse\\n1234\\nReverse of entered number is = 4321",
+            "OPT_B": "A",
+            "OPT_C": "A",
+            "OPT_D": "A",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 12,
+            "Q_TEXT": "Palindrome Numbers",
+            "Q_PRGM": "#include <stdio.h>\\nint main()\\n{\\n\\tint n, reverse = 0, temp;\\n\\tprintf(\"Enter a number to check if it is a palindrome or not\n\");\\n\\tscanf(\"%d\",&n);\\n\\ttemp = n;\\n\\twhile( temp != 0 )\\n\\t{\\n\\t\\treverse = reverse * 10;\\n\\t\\treverse = reverse + temp%10;\\n\\t\\ttemp = temp/10;\\n\\t}i\\n\\tf ( n == reverse )\\n\\tprintf(\"%d is a palindrome number.\n\", n);\\n\\telse\\n\\t\\tprintf(\"%d is not a palindrome number.\n\", n);\\n\\treturn 0;\\n\\t}",
+            "OPT_A": "Enter a number to check if it is a palindrome or not\\n12321\\n12321 is a palindrome number.\\n",
+            "OPT_B": "A",
+            "OPT_C": "A",
+            "OPT_D": "A",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 13,
+            "Q_TEXT": "Prime number",
+            "Q_PRGM": "#include<stdio.h>\\nint main()\\n{\\n\\tint n, i = 3, count, c;\\n\\tprintf(\"Enter the number of prime numbers required\n\");\\n\\tscanf(\"%d\",&n);\\n\\tif ( n >= 1 )\\n\\t{\\n\\t\\tprintf(\"First %d prime numbers are :\n\",n);\\n\\tprintf(\"2\n\");\\n\\t}\\n\\tfor ( count = 2 ; count <= n ;  )\\n\\t{\\n\\t\\tfor ( c = 2 ; c <= i - 1 ; c++ )\\n\\t\\t{\\n\\t\\t\\tif( i%c == 0 )\\n\\t\\t\\t\\tbreak;\\n\\t\\t\\t}\\n\\t\\tif ( c == i )\\n\\t\\t\\t{\\n\\t\\t\\t\\tprintf(\"%d\n\",i);\\n\\t\\t\\t\\tcount++;\\n\\t\\t\\t}\\n\\t\\ti++;\\n\\t\\t}\\n\\treturn 0;\\n}",
+            "OPT_A": "Enter the number of prime numbers required\\n10\\nFirst 10 prime numbers are:-\\n2\\n3\\n5\\n7\\n11\\n13\\n17\\n19\\n23\\n29\\n",
+            "OPT_B": "A",
+            "OPT_C": "A",
+            "OPT_D": "A",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 14,
+            "Q_TEXT": "Armstrong number",
+            "Q_PRGM": "#include <stdio.h>\\nint power(int, int);\\nint main()\\n{\\n\\tint n, sum = 0, temp, remainder, digits = 0;\\n\\tprintf(\"Input an integer\n\");\\n\\tscanf(\"%d\", &n);\\n\\ttemp = n;\\n\\twhile (temp != 0)\\n\\t{\\n\\t\\tdigits++;\\n\\t\\ttemp = temp/10;\\n\\t}\\n\\ttemp = n;\\n\\twhile(temp != 0)\\n\\t\\t{\\n\\t\\t\\tremainder = temp%10;\\n\\t\\t\\tsum = sum + power(remainder, digits);\\n\\t\\t\\ttemp = temp/10;\\n\\t\\t}\\n\\tif (n == sum)\\n\\t\\tprintf(\"%d is an Armstrong number.\n\", n);\\n\\telse\\n\\t\\tprintf(\"%d is not an Armstrong number.\n\", n);\\n\\treturn 0;\\n}",
+            "OPT_A": "Input an integer\\n9926315\\n9926315 is an armstrong",
+            "OPT_B": "A",
+            "OPT_C": "A",
+            "OPT_D": "A",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 15,
+            "Q_TEXT": "Fibonacci series",
+            "Q_PRGM": "#include<stdio.h>\\nint main()\\n{\\n\\tint n, first = 0, second = 1, next, c;\\n\\tprintf(\"Enter the number of terms\n\");\\n\\tscanf(\"%d\",&n);\\n\\tprintf(\"First %d terms of Fibonacci series are :-\n\",n);\\n\\tfor ( c = 0 ; c < n ; c++ )\\n\\t{\\n\\t\\tif ( c <= 1 )\\n\\t\\t\\tnext = c;\\n\\t\\telse\\n\\t\\t{\\n\\t\\tnext = first + second;\\n\\t\\tfirst = second;\\n\\t\\tsecond = next;\\n\\t}\\n\\tprintf(\"%d\n\",next);\\n\\t}\\n\\treturn 0;\\n}",
+            "OPT_A": "Enter the number of terms\\n5\\nFirst 5 terms of Fibonacci series are\\n0\\n1\\n1\\n2\\n3\\n",
+            "OPT_B": "A",
+            "OPT_C": "A",
+            "OPT_D": "A",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 16,
+            "Q_TEXT": "add two numbers using pointers",
+            "Q_PRGM": "#include <stdio.h>\\nint main()\\n{\\n\\tint first, second, *p, *q, sum;\\n\\tprintf(\"Enter two integers to add\n\");\\n\\tscanf(\"%d%d\", &first, &second);\\n\\tp = &first;\\n\\tq = &second;\\n\\tsum = *p + *q;\\n\\tprintf(\"Sum of entered numbers = %d\n\",sum);\\n\\treturn 0;\\n}",
+            "OPT_A": "Enter two integers to add\\n4\\n5\\nSum of entered numbers =9",
+            "OPT_B": "A",
+            "OPT_C": "A",
+            "OPT_D": "A",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 17,
+            "Q_TEXT": "To find maximum element in array",
+            "Q_PRGM": "#include <stdio.h>\\nint main()\\n{\\n\\tint array[100], maximum, size, c, location = 1;\\n\\tprintf(\"Enter the number of elements in array\");\\n\\tscanf(\"%d\", &size);\\n\\tprintf(\"Enter %d integers\n\",size);\\n\\tfor (c = 0; c < size; c++)\\n\\t\\tscanf(\"%d\", &array[c]);\\n\\t\\tmaximum = array[0];\\n\\tfor (c = 1; c < size; c++)\\n\\t{\\n\\t\\tif (array[c] > maximum)\\n\\t\\t{\\n\\t\\t\\tmaximum  = array[c];\\n\\t\\t\\tlocation = c+1;\\n\\t\\t}\\n\\t}\\n\\tprintf(\"Maximum element is present at location %d and it's value is %d.\n\", location, maximum);\\n\\treturn 0;\\n}",
+            "OPT_A": "Enter the number of elements in array\\n5\\nEnter 5 integers\\n5\\n7\\n2\\n9\\n1\\nMaximum element is present at location 4 and it's value is 9.\\n",
+            "OPT_B": "A",
+            "OPT_C": "A",
+            "OPT_D": "A",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 18,
+            "Q_TEXT": "To find minimum element in array",
+            "Q_PRGM": "#include<stdio.h>\\nint main()\\n{\\n\\tint array[100], minimum, size, c, location = 1;\\n\\tprintf(\"Enter the number of elements in array\");\\n\\tscanf(\"%d\",&size);\\n\\tprintf(\"Enter %d integers\", size);\\n\\tfor ( c = 0 ; c < size ; c++ )\\n\\t\\tscanf(\"%d\",&array[c]);\\n\\tminimum = array[0];\\n\\tfor ( c = 1 ; c < size;c++)\\n\\t{\\n\\t\\tif(array[c]<minimum)\\n\\t\\t{\\n\\t\\t\\tminimum = array[c];\\n\\t\\t\\tlocation = c+1;\\n\\t\\t}\\n\\t}\\n\\tprintf(\"Minimum element is present at location %d and it's value is %d.\n\", location, minimum);\\n\\treturn 0;\\n}",
+            "OPT_A": "Enter the number of elements in array\\n5\\nEnter 5 integers\\n5\\n7\\n2\\n9\\n1\\nMinimum element is present at location 5 and it's value is 1.",
+            "OPT_B": "A",
+            "OPT_C": "A",
+            "OPT_D": "A",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 19,
+            "Q_TEXT": "Binary Search",
+            "Q_PRGM": "#include <stdio.h>\\nint main()\\n{\\n\\tint c, first, last, middle, n, search, array[100];\\n\\tprintf(\"Enter number of elements\");\\n\\tscanf(\"%d\",&n);\\n\\tprintf(\"Enter %d integers\", n);\\n\\tfor (c = 0; c < n; c++)\\n\\t\\tscanf(\"%d\",&array[c]);\\n\\tprintf(\"Enter value to find\n\");\\n\\tscanf(\"%d\",&search);\\n\\tfirst = 0;\\n\\tlast = n - 1;\\n\\tmiddle = (first+last)/2;\\n\\twhile (first <= last)\\n\\t{\\n\\t\\tif (array[middle] < search)\\n\\t\\t\\tfirst = middle + 1;\\n\\t\\telse if (array[middle] == search)\\n\\t\\t{\\n\\t\\t\\tprintf(\"%d found at location %d.\n\", search, middle+1);\\n\\t\\t\\tbreak;\\n\\t\\t}\\n\\t\\telse\\n\\t\\t\\tlast = middle - 1;\\n\\tmiddle = (first + last)/2;\\n\\t}\\n\\tif (first > last)\\n\\t\\tprintf(\"Not found! %d is not present in the list.\",search);\\n\\treturn 0;\\n}",
+            "OPT_A": "Enter the number of elements\\n5\\nEnter 5 integers\\n1\\n5\\n7\\n9\\n10\\nEnter value to find\\n9\\n9 found at location 4.",
+            "OPT_B": "A",
+            "OPT_C": "A",
+            "OPT_D": "A",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 20,
+            "Q_TEXT": "Linear Seach",
+            "Q_PRGM": "#include <stdio.h>\\nint main()\\n{\\n\\tint array[100], search, c, n;\\n\\tprintf(\"Enter the number of elements in array\");\\n\\tscanf(\"%d\",&n);\\n\\tprintf(\"Enter %d integer(s)\", n);\\n\\tfor (c = 0; c < n; c++)\\n\\t\\tscanf(\"%d\", &array[c]);\\n\\tprintf(\"Enter the number to search\");\\n\\tscanf(\"%d\", &search);\\n\\tfor (c = 0; c < n; c++)\\n\\t{\\n\\t\\tif (array[c] == search)\\n\\t\\t{\\n\\t\\t\\tprintf(\"%d is present at location %d.\n\", search, c+1);\\n\\t\\t\\tbreak;\\n\\t\\t}\\n\\t}\\nif (c == n)\\n\\t\\tprintf(\"%d is not present in array.\", search);\\n\\t return 0;\\n}",
+            "OPT_A": "Enter the number of elements in array\\n5\\nEnter 5 numbers\\n2\\n4\\n1\\n6\\n5\\nEnter the number to search\\n6\\n6 is present at location 4.",
+            "OPT_B": "A",
+            "OPT_C": "A",
+            "OPT_D": "A",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 21,
+            "Q_TEXT": "Reverse of array",
+            "Q_PRGM": "#include <stdio.h>\\nint main()\\n{\\n\\tint n, c, d, a[100], b[100];\\n\\tprintf(\"Enter the number of elements in array\");\\n\\tscanf(\"%d\", &n);\\n\\tprintf(\"Enter the array elements\");\\n\\tfor (c = 0; c < n ; c++)\\n\\t\\tscanf(\"%d\", &a[c]);\\n\\tfor (c = n - 1, d = 0; c >= 0; c--, d++)\\n\\t\\tb[d] = a[c];\\n\\tfor (c = 0; c < n; c++)\\n\\t\\ta[c] = b[c];\\n\\tprintf(\"Reverse array is\");\\n\\tfor (c = 0; c < n; c++)\\n\\tprintf(\"%d\", a[c]);\\n\\treturn 0;\\n}",
+            "OPT_A": "Enter the number of elements in array\\n5\\nEnter the array elements\\n4\\n54\\n10\\n23\\n150\\nReverse of array is \\n150\\n23\\n10\\n54\\n4\\n",
+            "OPT_B": "A",
+            "OPT_C": "A",
+            "OPT_D": "A",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 22,
+            "Q_TEXT": "Merge Two arrays",
+            "Q_PRGM": "#include <stdio.h>\\nvoid merge(int [], int, int [], int, int []);\\nint main()\\n {\\n\\tint a[100], b[100], m, n, c, sorted[200];\\n\\tprintf(\"Input number of elements in first array\");\\n\\tscanf(\"%d\", &m);\\n\\tprintf(\"Input %d integers\", m);\\n\\tfor (c = 0; c < m; c++)\\n\\t{\\n\\t\\tscanf(\"%d\", &a[c]);\\n\\t}\\n\\tprintf(\"Input number of elements in second array\");\\n\\tscanf(\"%d\", &n);\\n\\tprintf(\"Input %d integers\", n);\\n\\tfor (c = 0; c < n; c++)\\n\\t{\\n\\t\\tscanf(\"%d\", &b[c]);\\n\\t}\\n\\tmerge(a, m, b, n, sorted);\\n\\tprintf(\"Sorted array:\");\\n\\tfor (c = 0; c < m + n; c++)\\n\\t{\\n\\t\\tprintf(\"%d\", sorted[c]);\\n\\t}\\n\\treturn 0;\\n}\\nvoid merge(int a[], int m, int b[], int n, int sorted[])\\n{\\n\\tint i, j, k;\\n\\tj = k = 0;\\n\\tfor (i = 0; i < m + n;)\\n\\t{\\n\\t\\tif (j < m && k < n)\\n\\t\\t{\\n\\t\\t\\tif (a[j] < b[k])\\n\\t\\t\\t{\\n\\t\\t\\t\\tsorted[i] = a[j];\\n\\t\\t\\t\\tj++;\\n\\t\\t\\t}\\n\\t\\t\\telse\\n\\t\\t\\t{\\n\\t\\t\\t\\tsorted[i] = b[k];\\n\\t\\t\\t\\tk++;\\n\\t\\t\\t}\\n\\t\\ti++;\\n\\t\\t}\\n\\t\\telse if (j == m)\\n\\t\\t{\\n\\t\\t\\tfor (; i < m + n;)\\n\\t\\t\\t\\t{\\n\\t\\t\\t\\t\\tsorted[i] = b[k];\\n\\t\\t\\t\\t\\tk++;\\n\\t\\t\\t\\t\\ti++;\\n\\t\\t\\t\\t}\\n\\t\\t\\t}\\n\\t\\telse\\n\\t\\t{\\n\\t\\t\\tfor(; i < m + n;)\\n\\t\\t\\t\\t{\\n\\t\\t\\t\\t\\tsorted[i] = a[j];\\n\\t\\t\\t\\t\\tj++;\\n\\t\\t\\t\\t\\ti++;\\n\\t\\t\\t\\t\\t}\\n\\t\\t\\t\\t}\\n\\t\\t\\t}\\n\\t\\t}\\n\\t",
+            "OPT_A": "Input number of elements in first array\\n3\\nInput 3 integers\\n2\\n4\\n6\\nInput number of elements in second array\\n3\\Input 3 integers\\n-1\\n2\\n3\\nSorted array:\\n-1\\n2\\n2\\n3\\n4\\n6",
+            "OPT_B": "A",
+            "OPT_C": "A",
+            "OPT_D": "A",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 23,
+            "Q_TEXT": "To print Pattern",
+            "Q_PRGM": "#include<stdio.h>\\nmain()\\n{\\n\\tint row, c, n, temp;\\n\\tprintf(\"Enter the number of rows in pyramid of stars you wish to see\");\\n\\tscanf(\"%d\",&n);\\n\\ttemp = n;\\n\\tfor ( row = 1 ; row <= n ; row++ )\\n\\t{\\n\\t\\tfor ( c = 1 ; c < temp ; c++ )\\n\\t\\t\\t printf(\" \");\\n\\t\\ttemp--;\\n\\t\\tfor ( c = 1 ; c <= 2*row - 1 ; c++ )\\n\\t\\t\\tprintf(\"*\");\\n\\t\\tprintf(\"\n\");\\n\\t}\\n\\treturn 0;\\n}",
+            "OPT_A": "\\t\\t\\t\\t*\\n\\t\\t\\t***\\n\\t\\t*****\\n\\t*******\\n*********",
+            "OPT_B": "A",
+            "OPT_C": "A",
+            "OPT_D": "A",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 24,
+            "Q_TEXT": "To print patter",
+            "Q_PRGM": "#include<stdio.h>\\nmain()\\n{\\n\\tint n, c, k;\\n\\tprintf(\"Enter number of rows\");\\n\\tscanf(\"%d\",&n);\\n\\tfor ( c = 1 ; c <= n ; c++ )\\n\\t{\\n\\t\\tfor( k = 1 ; k <= c ; k++ )\\n\\t\\t\\tprintf(\"*\");\\n\\t\\tprintf(\"\n\");\\n\\t}\\n}",
+            "OPT_A": "*\\n**\\n***\\n****\\n*****",
+            "OPT_B": "A",
+            "OPT_C": "A",
+            "OPT_D": "A",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 25,
+            "Q_TEXT": "To print pattern",
+            "Q_PRGM": "#include<stdio.h>\\nmain()\\n{\\n\\tint number = 1, n, c, k;\\n\\tprintf(\"Enter number of rows\n\")\\n\\t;scanf(\"%d\",&n);\\n\\tfor( c = 1 ; c <= n ; c++ )\\n\\t{\\n\\t\\tfor( k = 1 ; k <= c ; k++ )\\n\\t\\t{\\n\\t\\t\\tprintf(\"%d\",number);\\n\\t\\t\\tnumber++;\\n\\t\\t}\\n\\t\\tnumber = 1;\\n\\t\\tprintf(\"\n\");\\n\\t}\\n\\t getch();\\t}",
+            "OPT_A": "1\\n1 2\\n1 2 3\\n1 2 3 4\\n",
+            "OPT_B": "A",
+            "OPT_C": "A",
+            "OPT_D": "A",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 26,
+            "Q_TEXT": "To print pattern",
+            "Q_PRGM": "#include<stdio.h>\\nmain()\\n{\\n\\tint n, c, k, space;\\n\\tprintf(\"Enter number of rows\n\");\\n\\tscanf(\"%d\",&n);\\n\\tspace = n;\\n\\tfor ( k = 1 ; k <= n ; k++ )\\n\\t\\t{\\n\\t\\tfor ( c = 1 ; c < space ; c++ )\\n\\t\\t\\tprintf(\" \");\\n\\t\\tspace--;\\n\\t\\t for( c = 1 ; c <= k ; c++ )\\n\\t\\t\\tprintf(\"*\");\\n\\t\\tprintf(\"\n\");\\n\\t\\t}\\n\\treturn 0;\\n}",
+            "OPT_A": "\t\\t\\t\\t*\\n\\t\\t\\t**\\n\\t\\t***\\n\\t****\\n*****",
+            "OPT_B": "A",
+            "OPT_C": "A",
+            "OPT_D": "A",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 27,
+            "Q_TEXT": "To print pattern",
+            "Q_PRGM": "#include<stdio.h>\\nmain()\\n{\\n\\tint n, c, d, num = 1, space;\\n\\tscanf(\"%d\",&n);\\n\\tspace = n - 1;\\n\\tfor ( d = 1 ; d <= n ; d++ )\\n\\t{\\n\\t\\tnum = d;\\n\\t\\tfor ( c = 1 ; c <= space ; c++ )\\n\\t\\t\\tprintf(\" \");\\n\\t\\tspace--;\\n\\t\\tfor ( c = 1 ; c <= d ; c++ )\\n\\t\\t{\\n\\t\\t\\tprintf(\"%d\",num);\\n\\t\\t\\tnum++;\\n\\t\\t}\\n\\t\\tnum--;\\n\\t\\tnum--;\\n\\t\\tfor ( c = 1 ; c < d ; c++)\\n\\t\\t{\\n\\t\\t\\tprintf(\"%d\", num);\\n\\t\\t\\tnum--;\\n\\t\\t}\\n\\t\\tprintf(\"\n\");\\n\\t\\t}\\n\\t\\treturn 0;\\n",
+            "OPT_A": "\\t\\t\\t\\t1\\n\\t\\t\\t232\\n\\t\\t34543\\n\\t4567654\\n67898765",
+            "OPT_B": "A",
+            "OPT_C": "A",
+            "OPT_D": "A",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 28,
+            "Q_TEXT": "To print patter",
+            "Q_PRGM": "#include<stdio.h>\\nmain()\\n{\\n\\tint n, c, k, x = 1;\\n\\tscanf(\"%d\", &n);\\n\\tfor ( c = 1 ; c <= n ; c++ )\\n\\t{\\n\\t\\tfor ( k = 1 ; k <= c ; k++ )\\n\\t\\t\\t{\\n\\t\\t\\t\\tprintf(\"%d\", x);\\n\\t\\t\\t\\tx++;\\n\\t\\t\\t}\\n\\t\\tx--;\\n\\t\\tfor ( k = 1 ; k <= c - 1 ; k++ )\\n\\t\\t{\\n\\t\\t\\tx--;\\n\\t\\t\\tprintf(\"%d\", x);\\n\\t\\t}\\n\\t\\tprintf(\"\n\");x = 1;\\n\\t\\t}\\n\\t\\treturn 0;\\n}",
+            "OPT_A": "1\\n121\\n12321\\n1234321\\n123454321\\n",
+            "OPT_B": "A",
+            "OPT_C": "A",
+            "OPT_D": "A",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 29,
+            "Q_TEXT": "To print pattern",
+            "Q_PRGM": "main()\\n{\\n\\tint i,j,n,temp;\\n\\tprintf(\"enter number of lines\");\\n\\tscanf(\"%d\",&n);\\n\\tj=n*4;\\n\\tfor(i=0,temp=0;i<j;i++,temp++)\\n\\t\\t{\\n\\t\\tif(temp!=4)\\n\\t\\t{\\n\\t\\t\\tprintf(\"%d\",i%10);\\n\\t\\t}\\n\\t\\telse\\n\\t\\t{\\n\\t\\t\\tprintf(\"\n%d\",i%10);\\n\\t\\t\\ttemp=0;\\n\\t\\t}\\n\\t\\t}\\n\\treturn 0;\\n\\t}",
+            "OPT_A": "1234\n5678\n9012\n3456\n7890",
+            "OPT_B": "A",
+            "OPT_C": "A",
+            "OPT_D": "A",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 30,
+            "Q_TEXT": "To print pattern",
+            "Q_PRGM": "#include<stdio.h>\\nint main()\\n{\\n\\tchar prnt = '*';\\n\\t int i, j, nos = 4, s;\\n\\t for(i = 1; i <= 5; i++)\\n\\t{\\n\\t\\tfor(s = nos; s >= 1; s--)\\n\\t\\t{\\n\\t\\t\\tprintf(\"  \");\\n\\t\\t\\tfor (j = 1; j <= i; j++)\\n\\t\\t\\t\\t {\\n\\t\\t\\tprintf(\"%2c\", prnt);\\n\\t\\t}\\n\\t\\t\\tprintf(\"\n\");\\n\\t\\t--nos;\\n\\t}\\n\\treturn 0;\\n}",
+            "OPT_A": "\\t\\t\\t*\n\\t\\t**\n\\t***\n****",
+            "OPT_B": "A",
+            "OPT_C": "A",
+            "OPT_D": "A",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 31,
+            "Q_TEXT": "Selection Sort",
+            "Q_PRGM": "#include <stdio.h>\\nint main()\\n{\\n\\tint array[100], n, c, d, position, swap;\\n\\tprintf(\"Enter number of elements\n\");\\n\\tscanf(\"%d\", &n);\\n\\tprintf(\"Enter %d integers\n\", n);\\n\\tfor ( c = 0 ; c < n ; c++ )\\n\\t\\tscanf(\"%d\", &array[c]);\\n\\tfor(c=0;c<(n-1);c++)\\n\\t{\\n\\t\\tposition = c;\\n\\t\\tfor(d=c+1;d<n;d++)\\n\\t\\t{\\n\\t\\t\\tif(array[position] > array[d])\\n\\t\\t\\t\\tposition = d;\\n\\t\\t}\\n\\t\\tif ( position != c )\\n\\t\\t{\\n\\t\\t\\tswap = array[c];\\n\\t\\t\\tarray[c] = array[position];\\n\\t\\t\\tarray[position] = swap;\\n\\t\\t\\t}\\n\\t\\t}\\n\\tprintf(\"Sorted list in ascending order:\n\");\\n\\tfor ( c = 0 ; c < n ; c++ )\\n\\t\\tprintf(\"%d\n\", array[c]);\\n\\treturn 0;\\n\\t}",
+            "OPT_A": "Enter number of elements\\n5\\nEnter 5 Integers\\n10\\n7\\n2\\n5\\n1\\nSorted list in ascending order\\n1\\n2\\n5\\n7\\n10\\n",
+            "OPT_B": "A",
+            "OPT_C": "A",
+            "OPT_D": "A",
+            "ANSWER": 1
+          }
+        ]
+      },
+      {
+        "LEVEL_ID": 2,
+        "LEVEL_NAME": "Theory",
+        "LOCK_STATUS": 1,
+        "QUESTIONS": [
+          {
+            "Q_ID": 1,
+            "Q_TEXT": "TestQuestion",
+            "Q_PRGM": "",
+            "OPT_A": "A",
+            "OPT_B": "A",
+            "OPT_C": "A",
+            "OPT_D": "A",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 2,
+            "Q_TEXT": "TestQuestion",
+            "Q_PRGM": "",
+            "OPT_A": "A",
+            "OPT_B": "A",
+            "OPT_C": "A",
+            "OPT_D": "A",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 3,
+            "Q_TEXT": "TestQuestion",
+            "Q_PRGM": "",
+            "OPT_A": "A",
+            "OPT_B": "A",
+            "OPT_C": "A",
+            "OPT_D": "A",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 4,
+            "Q_TEXT": "TestQuestion",
+            "Q_PRGM": "",
+            "OPT_A": "A",
+            "OPT_B": "A",
+            "OPT_C": "A",
+            "OPT_D": "A",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 5,
+            "Q_TEXT": "TestQuestion",
+            "Q_PRGM": "",
+            "OPT_A": "A",
+            "OPT_B": "A",
+            "OPT_C": "A",
+            "OPT_D": "A",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 6,
+            "Q_TEXT": "TestQuestion",
+            "Q_PRGM": "",
+            "OPT_A": "A",
+            "OPT_B": "A",
+            "OPT_C": "A",
+            "OPT_D": "A",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 7,
+            "Q_TEXT": "TestQuestion",
+            "Q_PRGM": "",
+            "OPT_A": "A",
+            "OPT_B": "A",
+            "OPT_C": "A",
+            "OPT_D": "A",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 8,
+            "Q_TEXT": "TestQuestion",
+            "Q_PRGM": "",
+            "OPT_A": "A",
+            "OPT_B": "A",
+            "OPT_C": "A",
+            "OPT_D": "A",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 9,
+            "Q_TEXT": "TestQuestion",
+            "Q_PRGM": "",
+            "OPT_A": "A",
+            "OPT_B": "A",
+            "OPT_C": "A",
+            "OPT_D": "A",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 10,
+            "Q_TEXT": "TestQuestion",
+            "Q_PRGM": "",
+            "OPT_A": "A",
+            "OPT_B": "A",
+            "OPT_C": "A",
+            "OPT_D": "A",
+            "ANSWER": 1
+          }
+        ]
+      },
+      {
+        "LEVEL_ID": 3,
+        "LEVEL_NAME": "Miscellaneous",
+        "LOCK_STATUS": 1,
+        "QUESTIONS": [
+          {
+            "Q_ID": 1,
+            "Q_TEXT": "1. What is the output of this C code ?",
+            "Q_PRGM": "#include <stdio.h> \\nmain()\\n{\\nchar *p = 0; \\n*p = 'a';\\n printf(\"value in pointer p is %c\", *p);\\n}",
+            "OPT_A": "It will print a",
+            "OPT_B": "It will print 0",
+            "OPT_C": "Compile time error",
+            "OPT_D": "Run time error",
+            "ANSWER": 4
+          },
+          {
+            "Q_ID": 2,
+            "Q_TEXT": "What is the output of this C code?",
+            "Q_PRGM": "#include <stdio.h>\\nmain()\\n{\\nchar *p = \"Sanfoundry C-Test\";\\np[0] = 'a';\\np[1] = 'b';\\nprintf(\"%s\", p);\\n}",
+            "OPT_A": "abnfoundry C-Test",
+            "OPT_B": "Sanfoundry C-Test",
+            "OPT_C": "Compile time error",
+            "OPT_D": "Run time error",
+            "ANSWER": 4
+          },
+          {
+            "Q_ID": 3,
+            "Q_TEXT": "Which of the following is not a valid variable name declaration?",
+            "Q_PRGM": "",
+            "OPT_A": "int__a3;",
+            "OPT_B": "int__3a;",
+            "OPT_C": "int__A3;",
+            "OPT_D": "int 3_a;",
+            "ANSWER": 4
+          },
+          {
+            "Q_ID": 4,
+            "Q_TEXT": "Variable name resolving (number of significant characters for uniqueness of variable) depends  on",
+            "Q_PRGM": "",
+            "OPT_A": "Compiler and linker implementations",
+            "OPT_B": "Assemblers and loaders implementations",
+            "OPT_C": "C language",
+            "OPT_D": "None",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 5,
+            "Q_TEXT": "The format identifier ‘%i’ is also used for _____ data type?",
+            "Q_PRGM": "",
+            "OPT_A": "char",
+            "OPT_B": "int",
+            "OPT_C": "float",
+            "OPT_D": "double",
+            "ANSWER": 2
+          },
+          {
+            "Q_ID": 6,
+            "Q_TEXT": "Which data type is most suitable for storing a number 65000 in a 32-bit system?",
+            "Q_PRGM": "",
+            "OPT_A": "signed short",
+            "OPT_B": "unsigned short",
+            "OPT_C": "long",
+            "OPT_D": "int",
+            "ANSWER": 2
+          },
+          {
+            "Q_ID": 7,
+            "Q_TEXT": "Which of the following is a User-defined data type?",
+            "Q_PRGM": "",
+            "OPT_A": "typedef int Boolean;",
+            "OPT_B": "typedef enum {Mon, Tue, Wed, Thu, Fri} Workdays;",
+            "OPT_C": "struct {char name[10], int age};",
+            "OPT_D": "all of the mentioned",
+            "ANSWER": 4
+          },
+          {
+            "Q_ID": 8,
+            "Q_TEXT": "What is short int in C programming?",
+            "Q_PRGM": "",
+            "OPT_A": "Basic datatype of C",
+            "OPT_B": "Qualifier",
+            "OPT_C": "short is the qualifier and int is the basic datatype",
+            "OPT_D": "All of the mentioned",
+            "ANSWER": 3
+          },
+          {
+            "Q_ID": 9,
+            "Q_TEXT": "When double is converted to float, the value is?",
+            "Q_PRGM": "",
+            "OPT_A": "Truncated",
+            "OPT_B": "Rounded",
+            "OPT_C": "Depends on the compiler",
+            "OPT_D": "Depends on the standard",
+            "ANSWER": 3
+          },
+          {
+            "Q_ID": 10,
+            "Q_TEXT": "For which of the following, “PI++;” code will fail?",
+            "Q_PRGM": "",
+            "OPT_A": "#define PI 3.14",
+            "OPT_B": "char *PI = “A”;",
+            "OPT_C": "float PI = 3.14;",
+            "OPT_D": "None of the Mentioned",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 11,
+            "Q_TEXT": "What is the output of this C code?",
+            "Q_PRGM": "#include <stdio.h>\\nmain()\\n{int a = 10, b = 10;\\nif (a = 5)\\n\\tb--;\\nprintf(\"%d, %d\", a, b--);\\n}",
+            "OPT_A": "a = 10, b = 9",
+            "OPT_B": "a = 10, b = 8",
+            "OPT_C": "a = 5, b = 9",
+            "OPT_D": "a = 5, b = 8",
+            "ANSWER": 3
+          },
+
+          {
+            "Q_ID": 12,
+            "Q_TEXT": "Which of the following cannot be used as LHS of the expression in for (exp1;exp2; exp3) ?",
+            "Q_PRGM": "",
+            "OPT_A": "Variable",
+            "OPT_B": "Function",
+            "OPT_C": "typedef",
+            "OPT_D": "macros",
+            "ANSWER": 4
+          },
+          {
+            "Q_ID": 13,
+            "Q_TEXT": "Which keyword can be used for coming out of recursion?",
+            "Q_PRGM": "",
+            "OPT_A": "break",
+            "OPT_B": "return",
+            "OPT_C": "exit",
+            "OPT_D": "Both (a) and (b)",
+            "ANSWER": 2
+          },
+
+          {
+            "Q_ID": 14,
+            "Q_TEXT": "Which of the following are correct syntaxes to send an array as a parameter to function:",
+            "Q_PRGM": "",
+            "OPT_A": "func(&array);",
+            "OPT_B": "func(array);",
+            "OPT_C": "func(*array);",
+            "OPT_D": "Both a & b",
+            "ANSWER": 4
+          },
+          {
+            "Q_ID": 15,
+            "Q_TEXT": "Which of the following is not possible under any scenario?",
+            "Q_PRGM": "",
+            "OPT_A": "s1 = &s2;",
+            "OPT_B": "s1 = s2;",
+            "OPT_C": "(*s1).number = 10;",
+            "OPT_D": "None of the mentioned",
+            "ANSWER": 4
+          },
+          {
+            "Q_ID": 16,
+            "Q_TEXT": "Which of the following operation is illegal in structures?",
+            "Q_PRGM": "",
+            "OPT_A": "Typecasting of structure",
+            "OPT_B": "Pointer to a variable of same structure",
+            "OPT_C": "Dynamic allocation of memory for structure",
+            "OPT_D": "All of the mentioned",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 17,
+            "Q_TEXT": "Presence of code like “s.t.b = 10” indicate.",
+            "Q_PRGM": "",
+            "OPT_A": "Syntax Error",
+            "OPT_B": "structure",
+            "OPT_C": "double data type",
+            "OPT_D": "An ordinary variable name",
+            "ANSWER": 2
+          },
+          {
+            "Q_ID": 18,
+            "Q_TEXT": "What does this statement printf(“%10s”, state); means?",
+            "Q_PRGM": "",
+            "OPT_A": "10 spaces before the string state is printed",
+            "OPT_B": "Print empty spaces if the string state is less than 10 characters",
+            "OPT_C": "Print the last 10 characters of the string",
+            "OPT_D": "None of the mentioned",
+            "ANSWER": 2
+          },
+          {
+            "Q_ID": 19,
+            "Q_TEXT": "What is the output of this C code?",
+            "Q_PRGM": "#include <stdio.h>\\nint main()\\n{\\nint i = 10, j = 2;\\nprintf(\"%d\", printf(\"%d %d \", i, j));\\n}",
+            "OPT_A": "Compile time error",
+            "OPT_B": "10 2 4",
+            "OPT_C": "10 2 2",
+            "OPT_D": "10 2 5",
+            "ANSWER": 4
+          },
+          {
+            "Q_ID": 20,
+            "Q_TEXT": "The function ____ obtains block of memory dynamically.",
+            "Q_PRGM": "",
+            "OPT_A": "calloc",
+            "OPT_B": "malloc",
+            "OPT_C": "Both a & b",
+            "OPT_D": "free",
+            "ANSWER": 3
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "CAT_ID": 2,
+    "CAT_NAME": "C++",
+    "LEVELS": [
+      {
+        "LEVEL_ID": 1,
+        "LEVEL_NAME": "Practical",
+        "LOCK_STATUS": 1,
+        "QUESTIONS": [
+          {
+            "Q_ID" : 1 ,
+            "Q_TEXT" : "Analyse the sizeof datatypes",
+            "Q_PRGM" : "#include <iostream.h>\\nusing namespace std;\\nint main()\\n{\\n\\tcout <<\"Size of char : \" << sizeof(char) << endl;\\n\\tcout <<\"Size of int : \" << sizeof(int) << endl;\\n\\tcout <<\"Size of short int : \" << sizeof(short int) << endl;\\n\\tcout << \"Size of long int : \" << sizeof(long int) << endl;\\n\\tcout << \"Size of float : \" << sizeof(float) << endl;\\n\\tcout << \"Size of double : \" << sizeof(double) << endl;\\n\\tcout << \"Size of wchar_t : \" << sizeof(wchar_t) << endl;\\n\\treturn 0;\\n\\t}",
+            "OPT_A" : "Size of char : 1\\nSize of int : 4\\nSize of short int : 2\\nSize of long int : 4\\nSize of float : 4\\nSize of double : 8\\nSize of wchar_t : 4",
+            "OPT_B" : "A",
+            "OPT_C" : "A",
+            "OPT_D" : "A",
+            "ANSWER" : 1
+          },
+          {
+            "Q_ID" : 2 ,
+            "Q_TEXT" : "Arithmetic Functions",
+            "Q_PRGM" : "#include<iostream.h>\\nusing namespace std;\\nextern int a, b;\\nextern int c;\\nextern float f;\\nint main ()\\n{\\n\\tint a, b;\\n\\tint c;\\n\\tfloat f;\\n\\ta = 10;\\n\\tb = 20;\\n\\tc = a + b;\\n\\tcout << c << endl ;\\n\\tf = 70.0/3.0;\\n\\tcout << f << endl ;\\n\\treturn 0;}",
+            "OPT_A" : "30\\n23.3333",
+            "OPT_B" : "A",
+            "OPT_C" : "A",
+            "OPT_D" : "A",
+            "ANSWER" : 1
+          },
+          {
+            "Q_ID" : 3 ,
+            "Q_TEXT" : "Local and global variables",
+            "Q_PRGM" : "#include <iostream.h>\\nusing namespace std;\\nint g=20;\\nint main()\\n{\\n\\tint g=10;\\n\\tcout<<g;\\n\\treturn 0;\\n\\t}",
+            "OPT_A" : "10",
+            "OPT_B" : "A",
+            "OPT_C" : "A",
+            "OPT_D" : "A",
+            "ANSWER" : 1
+          },
+          {
+            "Q_ID" : 4 ,
+            "Q_TEXT" : "Constants and Literals",
+            "Q_PRGM" : "#include <iostream.h>\\nusing namespace std;\\nint main()\\n{\\n\\tconst int LENGTH = 10;\\n\\tconst int  WIDTH  = 5;\\n\\tconst char NEWLINE = '\n';\\n\\tint area;\\n\\tarea = LENGTH * WIDTH;\\n\\tcout << area;\\n\\tcout << NEWLINE;\\n\\treturn 0;}",
+            "OPT_A" : "50",
+            "OPT_B" : "A",
+            "OPT_C" : "A",
+            "OPT_D" : "A",
+            "ANSWER" : 1
+          },
+          {
+            "Q_ID" : 5 ,
+            "Q_TEXT" : "difference between signed and unsigned integers.",
+            "Q_PRGM" : "#include <iostream.h>\\nusing namespace std;\\nint main()\\n{\\n\\tshort int i;\\n\\tshort unsigned int j;\\n\\tj = 50000;\\n\\ti = j;\\n\\tcout<<i<<\" \"<<j;\\n\\treturn 0;}",
+            "OPT_A" : "-15536 50000",
+            "OPT_B" : "A",
+            "OPT_C" : "A",
+            "OPT_D" : "A",
+            "ANSWER" : 1
+          },
+          {
+            "Q_ID" : 6 ,
+            "Q_TEXT" : "Static Variables and Functions",
+            "Q_PRGM" : "#include <iostream.h>\\nvoid func(void);\\nstatic int count = 10;\\nmain()\\n{\\n\\twhile(count--)\\n\\t{\\n\\t\\tfunc();\\n\\t}\\n\\treturn 0;\\n}\\nvoid func( void )\\n{\\n\\tstatic int i = 5;\\n\\ti++;\\n\\tstd::cout << \"i is \" << i ;\\n\\tstd::cout <<\" and count is \" << count << std::endl;\\n",
+            "OPT_A" : "i is 6 and count is 9\\ni is 7 and count is 8\\ni is 8 and count is 7\\ni is 9 and count is 6\\ni is 10 and count is 5\\ni is 11 and count is 4\\ni is 12 and count is 3\\ni is 13 and count is 2\\ni is 14 and count is 1\\ni is 15 and count is 0\\n",
+            "OPT_B" : "A",
+            "OPT_C" : "A",
+            "OPT_D" : "A",
+            "ANSWER" : 1
+          },
+          {
+            "Q_ID" : 7 ,
+            "Q_TEXT" : "Maximum of two numbers",
+            "Q_PRGM" : "#include <iostream.h>\\nusing namespace std;\\nint max(int num1, int num2);\\nint main ()\\n{\\n\\tint a = 100;\\n\\tint b = 200;\\n\\tint ret;\\n\\tret = max(a, b);\\n\\tcout <<\"Max value is : \" << ret << endl;\\n\\treturn 0;\\n\\t}\\nint max(int num1, int num2)\\n {\\n\\tint result;\\n\\tif (num1 > num2)\\n\\t\\tresult = num1;\\n\\telse\\n\\t\\tresult = num2;\\n\\treturn result;\\n\\t }",
+            "OPT_A" : "200",
+            "OPT_B" : "A",
+            "OPT_C" : "A",
+            "OPT_D" : "A",
+            "ANSWER" : 1
+          },
+          {
+            "Q_ID" : 8 ,
+            "Q_TEXT" : "Addition of numbers using function",
+            "Q_PRGM" : "#include <iostream.h>\\nusing namespace std;\\nint sum(int a, int b=20)\\n{\\n\\tint result;\\n\\tresult = a + b;\\n\\treturn (result);\\n\\t}\\nint main()\\n{\\n\\tint a = 100;\\n\\tint b = 200;\\n\\tint result;\\n\\tresult = sum(a, b);\\n\\tcout <<\"Total value is :\" << result << endl;\\n\\tresult = sum(a);\\n\\tcout << \"Total value is :\" << result << endl;\\n\\treturn 0;\\n\\t}",
+            "OPT_A" : "Total value is :300\\nTotal value is :120",
+            "OPT_B" : "A",
+            "OPT_C" : "A",
+            "OPT_D" : "A",
+            "ANSWER" : 1
+          },
+          {
+            "Q_ID" : 9 ,
+            "Q_TEXT" : "Ceil Floor Square Root Functions",
+            "Q_PRGM" : "#include<iostream.h>\\n#include<cmath.h>\\nusing namespace std;\\nint main()\\n{\\n\\tshort s = 10;\\n\\tint i=-1000;\\n\\tlong l=100000;\\n\\tfloat f=230.47;\\n\\tdouble d = 200.374;\\n\\tcout<<\"sin(d) :\"<<sin(d)<<endl;\\n\\tcout<<\"abs(i) :\"<<abs(i)<<endl;\\n\\tcout<<\"floor(d) :\"<<floor(d)<<endl;\\n\\tcout<<\"sqrt(f) :\"<<sqrt(f)<<endl;\\n\\tcout<<\"pow( d, 2) :\" <<pow(d, 2)<<endl;\\n\\treturn 0;\\n}",
+            "OPT_A" : "sign(d) :-0.634939\\nabs(i) :1000\\nfloor(d) :200\\nsqrt(f) :15.1812\\npow( d, 2 ) :40149.7",
+            "OPT_B" : "A",
+            "OPT_C" : "A",
+            "OPT_D" : "A",
+            "ANSWER" : 1
+          },
+          {
+            "Q_ID" : 10 ,
+            "Q_TEXT" : "Random Function",
+            "Q_PRGM" : "#include <iostream.h>\\n#include <ctime.h>\\n#include <cstdlib.h>\\nusing namespace std;\\nint main()\\n{\\n\\tint i,j;\\n\\tsrand( (unsigned)time(NULL));\\n\\tfor(i=0;i<10;i++)\\n\\t{\\n\\t\\tj=rand();\\n\\t\\tcout<<\"Random Number:\" << j << endl;\\n\\t\\t}\\n\\treturn 0;\\n}",
+            "OPT_A" : "Random Number : 1748144778\\nRandom Number : 630873888\\nRandom Number : 2134540646\\nRandom Number : 219404170\\nRandom Number : 902129458\\nRandom Number : 920445370\\nRandom Number : 1319072661\\nRandom Number : 257938873R\\nandom Number : 1256201101\\nRandom Number : 580322989",
+            "OPT_B" : "A",
+            "OPT_C" : "A",
+            "OPT_D" : "A",
+            "ANSWER" : 1
+          },
+          {
+            "Q_ID" : 11 ,
+            "Q_TEXT" : "Concept of arrays",
+            "Q_PRGM" : "#include <iostream.h>\\nusing namespace std;\\n#include <iomanip.h>\\nusing std::setw;\\nint main ()\\n{\\n\\tint n[10];\\n\\tfor(int i=0;i<10;i++)\\n\\t{\\n\\t\\tn[i]=i+100;\\n\\t}\\n\\tcout<<\"Element\"<<setw(13)<<\"Value\"<<endl;\\n\\tfor(int j=0;j<10;j++)\\n\\t{\\n\\t\\tcout<<setw(7)<<j<<setw(13)<<n[j]<<endl;\\n\\t}\\n\\treturn 0;\\n}",
+            "OPT_A" : "Element\\t\\tValue\\n0\\t\\t100\\n1\\t\\t101\\n2\\t\\t102\\n3\\t\\t103\\n4\\t\\t104\\n5\\t\\t105\\n6\\t\\t106\\n7\\t\\t107\\n8\\t\\t108\\n9\\t\\t109\\n",
+            "OPT_B" : "A",
+            "OPT_C" : "A",
+            "OPT_D" : "A",
+            "ANSWER" : 1
+          },
+          {
+            "Q_ID" : 12 ,
+            "Q_TEXT" : "String Functions",
+            "Q_PRGM" : "#include<iostream.h>\\n#include<cstring.h>\\nusing namespace std;\\nint main()\\n{\\n\\tchar str1[10] =\"Hello\";\\n\\tchar str2[10]=\"World\";\\n\\tchar str3[10];\\n\\tint  len ;\\n\\tstrcpy( str3, str1);\\n\\tcout <<\"strcpy( str3, str1) : \" << str3 << endl;\\n\\tstrcat( str1, str2);\\n\\tcout <<\"strcat( str1, str2):\" << str1 << endl;\\n\\tlen = strlen(str1);\\n\\tcout <<\"strlen(str1) : \" << len << endl;\\n\\treturn 0;\\n}",
+            "OPT_A" : "strcpy( str3, str1) : Hello\\nstrcat( str1, str2): HelloWorld\\nstrlen(str1) : 10",
+            "OPT_B" : "A",
+            "OPT_C" : "A",
+            "OPT_D" : "A",
+            "ANSWER" : 1
+          },
+          {
+            "Q_ID" : 13 ,
+            "Q_TEXT" : "Date and Time Functions",
+            "Q_PRGM" : "#include <iostream.h>\\n#include <ctime.h>\\nusing namespace std;\\nint main( )\\n{\\n\\ttime_t now = time(0);\\n\\tchar* dt = ctime(&now);\\n\\tcout <<\"The local date and time is: \" << dt << endl;\\n\\ttm *gmtm = gmtime(&now);\\n\\tdt = asctime(gmtm);\\n\\tcout <<\"The UTC date and time is:\"<< dt << endl;\\n}",
+            "OPT_A" : "The local date and time is: Sat Jan  20 20:07:41 2016\\nThe UTC date and time is:Sun Jan  21 03:07:41 2016",
+            "OPT_B" : "A",
+            "OPT_C" : "A",
+            "OPT_D" : "A",
+            "ANSWER" : 1
+          },
+          {
+            "Q_ID" : 14 ,
+            "Q_TEXT" : "Date & Time",
+            "Q_PRGM" : "#include <iostream.h>\\n#include <ctime.h>\\nusing namespace std;\\nint main( )\\n{\\n\\ttime_t now = time(0);\\n\\tcout <<\"Number of sec since January 1,1970:\" << now << endl;\\n\\ttm *ltm = localtime(&now);\\n\\tcout <<\"Year: \"<< 1900 + ltm->tm_year << endl;\\n\\tcout <<\"Month: \"<< 1 + ltm->tm_mon<< endl;\\n\\tcout <<\"Day: \"<<  ltm->tm_mday << endl;\\n\\tcout <<\"Time: \"<< 1 + ltm->tm_hour <<\":\";\\n\\tcout << 1 + ltm->tm_min <<\":\";\\n\\tcout << 1 + ltm->tm_sec << endl;\\n}",
+            "OPT_A" : "Number of sec since January 1, 1970:1294548238\\nYear: 2016\\nMonth: 1\\nDay: 8\\nTime: 22: 44:59\\n",
+            "OPT_B" : "A",
+            "OPT_C" : "A",
+            "OPT_D" : "A",
+            "ANSWER" : 1
+          },
+          {
+            "Q_ID" : 15 ,
+            "Q_TEXT" : "Classes and Objects",
+            "Q_PRGM" : "#include <iostream.h>\\nusing namespace std;\\nclass Box\\n{\\n\\tpublic:\\n\\t\\tdouble length;\\n\\t\\tdouble breadth;\\n\\t\\tdouble height;\\n};\\nint main()\\n{\\nBox Box1;\\n\\tBox Box2;\\n\\tdouble volume =0.0;\\n\\tBox1.height = 5.0;\\n\\tBox1.length = 6.0;\\n\\tBox1.breadth = 7.0;\\n\\tBox2.height = 10.0;\\n\\tBox2.length = 12.0;\\n\\tBox2.breadth = 13.0;\\n\\tvolume = Box1.height * Box1.length * Box1.breadth;\\n\\tcout <<\"Volume of Box1 : \"<<volume <<endl;\\n\\tvolume = Box2.height * Box2.length * Box2.breadth;\\n\\tcout << \"Volume of Box2 : \" << volume <<endl;\\n\\treturn 0;\\n}",
+            "OPT_A" : "Volume of Box1 : 210\\nVolume of Box2 : 1560",
+            "OPT_B" : "A",
+            "OPT_C" : "A",
+            "OPT_D" : "A",
+            "ANSWER" : 1
+          },
+          {
+            "Q_ID" : 16 ,
+            "Q_TEXT" : "Single Inheritance",
+            "Q_PRGM" : "#include <iostream.h>\\nusing namespace std;\\nclass Shape\\n{\\n\\tpublic:\\n\\t\\tvoid setWidth(int w)\\n\\t\\t{\\n\\t\\t\\twidth = w;\\n\\t\\t}\\n\\t\\tvoid setHeight(int h)\\n\\t\\t{\\n\\t\\t\\theight = h;\\n\\t\\t}\\n\\tprotected:\\n\\t\\tint width;\\n\\t\\tint height;\\n\\nclass Rectangle: public Shape\\n{\\n\\tpublic:\\n\\t\\tint getArea()\\n\\t\\t{\\n\\t\\t\\treturn(width*height);\\n\\t\\t}\\n};\\nint main(void)\\n{\\n\\tRectangle Rect;\\n\\tRect.setWidth(5);\\n\\tRect.setHeight(7);\\n\\tcout<<\"Total area: \"<< Rect.getArea() << endl;\\n\\treturn 0;\\n}",
+            "OPT_A" : "Total area: 35",
+            "OPT_B" : "A",
+            "OPT_C" : "A",
+            "OPT_D" : "A",
+            "ANSWER" : 1
+          },
+          {
+            "Q_ID" : 17 ,
+            "Q_TEXT" : "Multiple Inheritance",
+            "Q_PRGM" : "#include <iostream.h>\\nusing namespace std;\\nclass Shape \\n{\\n\\tpublic:\\n\\t\\tvoid setWidth(int w)\\n\\t\\t{\\n\\t\\t\\twidth = w;\\n\\t\\t}\\n\\t\\tvoid setHeight(int h)\\n\\t\\t{\\n\\t\\t\\theight = h;\\n\\t\\t}\\n\\tprotected:\\n\\t\\tint width;\\n\\t\\tint height;\\n\\t\\t};\\nclass PaintCost\\n{\\n\\tpublic:\\n\\t\\tint getCost(int area)\\n\\t\\t{\\n\\t\\t\\treturn area * 70;\\n\\t\\t}\\n};\\nclass Rectangle: public Shape, public PaintCost\\n{\\n\\tpublic:\\n\\t\\tint getArea()\\n\\t\\t{\\n\\t\\t\\treturn (width * height);\\n\\t\\t}\\n};\\nint main(void)\\n{\\n\\tRectangle Rect;\\n\\tint area;\\n\\tRect.setWidth(5);\\n\\tRect.setHeight(7);\\n\\tarea = Rect.getArea();\\n\\tcout<<\"Total area: \"<<Rect.getArea()<<endl;\\n\\tcout<<\"Total paint cost: $\"<< Rect.getCost(area)<< endl;\\n\\treturn 0;\\n}",
+            "OPT_A" : "Total area: 35\\nTotal paint cost: $2450",
+            "OPT_B" : "A",
+            "OPT_C" : "A",
+            "OPT_D" : "A",
+            "ANSWER" : 1
+          },
+          {
+            "Q_ID" : 18 ,
+            "Q_TEXT" : "Function Overloading",
+            "Q_PRGM" : "#include <iostream.h>\\nusing namespace std;\\nclass printData\\n{\\n\\tpublic:\\n\\t\\tvoid print(int i)\\n\\t\\t{\\n\\t\\t\\tcout <<\"Printing int: \" << i << endl;\\n\\t\\t}\\n\\t\\tvoid print(double  f)\\n\\t\\t{\\n\\t\\t\\tcout <<\"Printing float: \" << f << endl;\\n\\t\\t}\\n\\t\\tvoid print(char* c)\\n\\t\\t{\\n\\t\\t\\tcout<<\"Printing character: \" << c << endl;\\n\\t\\t}\\n};\\nint main(void)\\n{\\n\\tprintData pd;\\n\\tpd.print(5);\\n\\tpd.print(500.263);\\n\\tpd.print(\"Hello C++\");\\n\\treturn 0;\\n\\t}",
+            "OPT_A" : "Printing int: 5\\nrinting float: 500.263\\nPrinting character: Hello C++",
+            "OPT_B" : "A",
+            "OPT_C" : "A",
+            "OPT_D" : "A",
+            "ANSWER" : 1
+          },
+          {
+            "Q_ID" : 19 ,
+            "Q_TEXT" : "Operator Overloading",
+            "Q_PRGM" : "#include <iostream.h>\\nusing namespace std;\\nclass Box\\n{\\n\\tpublic:\\n\\t\\tdouble getVolume(void)\\n\\t\\t{\\n\\t\\t\\treturn length * breadth * height;\\n\\t\\t}\\n\\t\\tvoid setLength(double len)\\n\\t\\t{\\n\\t\\t\\tlength = len;\\n\\t\\t}\\n\\t\\tvoid setBreadth(double bre)\\n\\t\\t{\\n\\t\\t\\tbreadth = bre;\\n\\t\\t}\\n\\t\\tvoid setHeight(double hei)\\n\\t\\t{\\n\\t\\t\\theight = hei;\\n\\t\\t}\\n\\t\\t Box operator+(const Box& b)\\n\\t\\t{\\n\\t\\t\\tBox box;\\n\\t\\t\\tbox.length = this->length + b.length;\\n\\t\\t\\tbox.breadth = this->breadth + b.breadth;\\n\\t\\t\\tbox.height = this->height + b.height;\\n\\t\\t\\treturn box;\\n\\t\\t}\\n\\tprivate:\\n\\t\\tdouble length;\\n\\t\\tdouble breadth;\\n\\t\\tdouble height;\\n};\\nint main( )\\n{\\nBox Box1;\\n\\tBox Box2;\\n\\tBox Box3;\\n\\tdouble volume = 0.0;\\n\\tBox1.setLength(6.0);\\n\\tBox1.setBreadth(7.0);\\n\\tBox1.setHeight(5.0);\\n\\tBox2.setLength(12.0);\\n\\tBox2.setBreadth(13.0);\\n\\tBox2.setHeight(10.0);\\n\\tvolume = Box1.getVolume();\\n\\tcout <<\"Volume of Box1 : \" << volume <<endl;\\n\\tvolume = Box2.getVolume();\\n\\tcout << \"Volume of Box2 : \" << volume <<endl;\\n\\tBox3 = Box1 + Box2;\\n\\tvolume = Box3.getVolume();\\n\\tcout <<\"Volume of Box3 : \" << volume <<endl;\\n\\treturn 0;\\n}",
+            "OPT_A" : "Volume of Box1 : 210\\nVolume of Box2 : 1560\\nVolume of Box3 : 5400",
+            "OPT_B" : "A",
+            "OPT_C" : "A",
+            "OPT_D" : "A",
+            "ANSWER" : 1
+          },
+          {
+            "Q_ID" : 20 ,
+            "Q_TEXT" : "Polymorphism",
+            "Q_PRGM" : "#include <iostream.h>\\nusing namespace std;\\nclass Shape\\n {\\n\\tprotected:\\n\\t\\tint width, height;\\n\\tpublic:\\n\\t\\tShape( int a=0, int b=0)\\n\\t\\t{\\n\\t\\t\\twidth = a;\\n\\t\\t\\theight = b;\\n\\t\\t}\\n\\t\\tint area()\\n\\t\\t{\\n\\t\\t\\tcout <<\"Parent class area :\" <<endl;\\n\\t\\t\\treturn 0;\\n\\t\\t\\t}\\n};\\nclass Rectangle: public Shape\\n{\\n\\tpublic:\\n\\t\\tRectangle( int a=0, int b=0):Shape(a, b){ }\\n\\t\\tint area ()\\n\\t\\t{\\n\\t\\t\\tcout <<\"Rectangle class area :\" <<endl;\\n\\t\\t\\treturn (width * height);\\n\\t\\t}\\n};\\nclass Triangle: public Shape\\n{\\n\\tpublic:\\n\\t\\tTriangle( int a=0, int b=0):Shape(a, b){  }\\n\\t\\t int area ()\\n\\t\\t{\\n\\t\\t\\tcout<<\"Triangle class area :\" <<endl;\\n\\t\\t\\treturn(width * height / 2); \\n\\t\\t}\\n};\\nint main( )\\n{\\n\\tShape *shape;\\n\\tRectangle rec(10,7);\\n\\tTriangle  tri(10,5);\\n\\tshape = &rec;\\n\\tshape->area();\\n\\tshape = &tri;\\n\\tshape->area();\\n\\treturn 0;\\n}",
+            "OPT_A" : "Parent class area\\nParent class area",
+            "OPT_B" : "A",
+            "OPT_C" : "A",
+            "OPT_D" : "A",
+            "ANSWER" : 1
+          }
+        ]
+      },
+      {
+        "LEVEL_ID": 2,
+        "LEVEL_NAME": "Theory",
+        "LOCK_STATUS": 1,
+        "QUESTIONS": [
+          {
+            "Q_ID": 1,
+            "Q_TEXT": "TestQuestion",
+            "Q_PRGM": "",
+            "OPT_A": "A",
+            "OPT_B": "A",
+            "OPT_C": "A",
+            "OPT_D": "A",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 2,
+            "Q_TEXT": "TestQuestion",
+            "Q_PRGM": "",
+            "OPT_A": "A",
+            "OPT_B": "A",
+            "OPT_C": "A",
+            "OPT_D": "A",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 3,
+            "Q_TEXT": "TestQuestion",
+            "Q_PRGM": "",
+            "OPT_A": "A",
+            "OPT_B": "A",
+            "OPT_C": "A",
+            "OPT_D": "A",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 4,
+            "Q_TEXT": "TestQuestion",
+            "Q_PRGM": "",
+            "OPT_A": "A",
+            "OPT_B": "A",
+            "OPT_C": "A",
+            "OPT_D": "A",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 5,
+            "Q_TEXT": "TestQuestion",
+            "Q_PRGM": "",
+            "OPT_A": "A",
+            "OPT_B": "A",
+            "OPT_C": "A",
+            "OPT_D": "A",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 6,
+            "Q_TEXT": "TestQuestion",
+            "Q_PRGM": "",
+            "OPT_A": "A",
+            "OPT_B": "A",
+            "OPT_C": "A",
+            "OPT_D": "A",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 7,
+            "Q_TEXT": "TestQuestion",
+            "Q_PRGM": "",
+            "OPT_A": "A",
+            "OPT_B": "A",
+            "OPT_C": "A",
+            "OPT_D": "A",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 8,
+            "Q_TEXT": "TestQuestion",
+            "Q_PRGM": "",
+            "OPT_A": "A",
+            "OPT_B": "A",
+            "OPT_C": "A",
+            "OPT_D": "A",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 9,
+            "Q_TEXT": "TestQuestion",
+            "Q_PRGM": "",
+            "OPT_A": "A",
+            "OPT_B": "A",
+            "OPT_C": "A",
+            "OPT_D": "A",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 10,
+            "Q_TEXT": "TestQuestion",
+            "Q_PRGM": "",
+            "OPT_A": "A",
+            "OPT_B": "A",
+            "OPT_C": "A",
+            "OPT_D": "A",
+            "ANSWER": 1
+          }
+        ]
+      },
+      {
+        "LEVEL_ID": 3,
+        "LEVEL_NAME": "Miscellaneous",
+        "LOCK_STATUS": 1,
+        "QUESTIONS": [
+          {
+            "Q_ID": 1,
+            "Q_TEXT": " How many characters are specified in the ASCII scheme?",
+            "Q_PRGM": "",
+            "OPT_A": "64",
+            "OPT_B": "128",
+            "OPT_C": "256",
+            "OPT_D": "none of the mentioned",
+            "ANSWER": 2
+          },
+          {
+            "Q_ID": 2,
+            "Q_TEXT": "What is the output of this program?",
+            "Q_PRGM": "#include <iostream>\\nusing namespace std;\\nint main()\\n{\\n\\tchar c = 74;\\n\\tcout << c;\\n\\treturn 0;\\n\\t}",
+            "OPT_A": "A",
+            "OPT_B": "N",
+            "OPT_C": "J",
+            "OPT_D": "I",
+            "ANSWER": 3
+          },
+          {
+            "Q_ID": 3,
+            "Q_TEXT": "The size of an object or a type can be determined using which operator?",
+            "Q_PRGM": "",
+            "OPT_A": "malloc",
+            "OPT_B": "sizeof",
+            "OPT_C": "alloc",
+            "OPT_D": "calloc",
+            "ANSWER": 2
+          },
+          {
+            "Q_ID": 4,
+            "Q_TEXT": "What is the output of this program?",
+            "Q_PRGM": "include <stdio.h>\\nint main()\\n\\t{\\nchar a = \"012\";\\n\\tprintf(\"%d\", a);\\n\\treturn 0;\\n\\t}",
+            "OPT_A": "Compiler error",
+            "OPT_B": "12",
+            "OPT_C": "10",
+            "OPT_D": "Empty",
+            "ANSWER": 3
+          },
+          {
+            "Q_ID": 5,
+            "Q_TEXT": "What does a escape code represent?",
+            "Q_PRGM": "",
+            "OPT_A": "alert",
+            "OPT_B": "backslash",
+            "OPT_C": "tab",
+            "OPT_D": "form feed",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 6,
+            "Q_TEXT": "What is the output of this program?",
+            "Q_PRGM": "#include <iostream>\\nusing namespace std;\\nint main()\\n\\t{\\n\\tint num = 0x20 + 020 +20;\\n\\tcout << sizeof(num)<<'\n';\\n\\treturn 0;\\n\\t}",
+            "OPT_A": "2",
+            "OPT_B": "4",
+            "OPT_C": "Depends on compiler.",
+            "OPT_D": "garbage",
+            "ANSWER": 3
+          },
+          {
+            "Q_ID": 7,
+            "Q_TEXT": "Which operator is having the highest precedence?",
+            "Q_PRGM": "",
+            "OPT_A": "postfix",
+            "OPT_B": "unary",
+            "OPT_C": "shift",
+            "OPT_D": "equality",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 8,
+            "Q_TEXT": "What is the output of this program?",
+            "Q_PRGM": "#include <iostream>\\nusing namespace std;\\nint main()\\n{\\n\\tint a;\\n\\ta = 5 + 3 * 5;\\n\\tcout << a;\\n\\treturn 0;\\n}",
+            "OPT_A": "35",
+            "OPT_B": "20",
+            "OPT_C": "25",
+            "OPT_D": "30",
+            "ANSWER": 2
+          },
+          {
+            "Q_ID": 9,
+            "Q_TEXT": "Which of the following is a valid floating point literal?",
+            "Q_PRGM": "",
+            "OPT_A": "f287.333",
+            "OPT_B": "F287.333",
+            "OPT_C": "287.e2",
+            "OPT_D": "287.3.e2",
+            "ANSWER": 3
+          },
+          {
+            "Q_ID": 10,
+            "Q_TEXT": "What is the output of this program?",
+            "Q_PRGM": "#include <iostream>\\nusing namespace std;\\nint main()\\n{\\n\\tfloat num1 = 1.1;\\n\\tdouble num2 = 1.1;\\n\\tif (num1 == num2)\\n\\t\\tcout << \"stanford\";\\n\\telse\\n\\t\\tcout << \"harvard\";\\n\\treturn 0;\\n}",
+            "OPT_A": "harvard",
+            "OPT_B": "stanford",
+            "OPT_C": "compile time error",
+            "OPT_D": "runtime error",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 11,
+            "Q_TEXT": "What does the following statement mean?\\nint (*fp)(char*)",
+            "Q_PRGM": "",
+            "OPT_A": "pointer to a pointer",
+            "OPT_B": "pointer to an array of chars",
+            "OPT_C": "pointer to function taking a char* argument and returns an int",
+            "OPT_D": "function taking a char* argument and returning a pointer to int",
+            "ANSWER": 3
+          },
+          {
+            "Q_ID": 12,
+            "Q_TEXT": "What is the output of this program?",
+            "Q_PRGM": "#include <iostream>\\nusing namespace std;\\nint main()\\n{\\n\\tint a = 5, b = 10, c = 15;\\n\\tint *arr[ ] = {&a, &b, &c};\\n\\tcout << arr[1];\\n\\treturn 0;\\n}",
+            "OPT_A": "5",
+            "OPT_B": "10",
+            "OPT_C": "15",
+            "OPT_D": "it will return some random number",
+            "ANSWER": 4
+          },
+          {
+            "Q_ID": 13,
+            "Q_TEXT": "What is the index number of the last element of an array with 9 elements?",
+            "Q_PRGM": "",
+            "OPT_A": "9",
+            "OPT_B": "8",
+            "OPT_C": "0",
+            "OPT_D": "Programmer-defined",
+            "ANSWER": 2
+          },
+          {
+            "Q_ID": 14,
+            "Q_TEXT": "What is the output of this program?",
+            "Q_PRGM": "#include <stdio.h>\\nusing namespace std;\\nint main()\\n{\\n\\tchar str[5] = \"ABC\";\\n\\tcout << str[3];\\n\\tcout << str;\\n\\treturn 0;\\n}",
+            "OPT_A": "ABC",
+            "OPT_B": "ABCD",
+            "OPT_C": "AB",
+            "OPT_D": "None of the mentioned",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 15,
+            "Q_TEXT": "In which of the following we cannot overload the function?",
+            "Q_PRGM": "",
+            "OPT_A": "return function",
+            "OPT_B": "caller",
+            "OPT_C": "called function",
+            "OPT_D": "none of the mentioned",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 16,
+            "Q_TEXT": "What is the output of this program?",
+            "Q_PRGM": "#include <stdio.h>\\nusing namespace std;\\nint main()\\n{\\n\\yint array[] = {10, 20, 30};\\n\\tcout << -2[array];\\n\\treturn 0;\\n}",
+            "OPT_A": "-15",
+            "OPT_B": "-30",
+            "OPT_C": "compile time error",
+            "OPT_D": "garbage value",
+            "ANSWER": 2
+          },
+          {
+            "Q_ID": 17,
+            "Q_TEXT": "Pick out the correct statement.",
+            "Q_PRGM": "",
+            "OPT_A": "A friend function may be a member of another class.",
+            "OPT_B": " A friend function may not be a member of another class.",
+            "OPT_C": " A friend function may or may not be a member of another class.",
+            "OPT_D": " None of the mentioned",
+            "ANSWER": 3
+          },
+          {
+            "Q_ID": 18,
+            "Q_TEXT": "What is the new value of x?",
+            "Q_PRGM": "#include <iostream>\\nusing namespace std;\\nvoid fun(int &x)\\n{\\n\\tx = 20;\\n}\\nint main()\\n{\\n\\tint x = 10;\\n\\tfun(x);\\n\\tcout << \"New value of x is \" << x;\\n\\treturn 0;\\n}",
+            "OPT_A": "10",
+            "OPT_B": "20",
+            "OPT_C": "15",
+            "OPT_D": " none of the mentioned",
+            "ANSWER": 2
+          },
+          {
+            "Q_ID": 19,
+            "Q_TEXT": "How many ways of passing a parameter are there in c++?",
+            "Q_PRGM": "",
+            "OPT_A": "1",
+            "OPT_B": "2",
+            "OPT_C": "3",
+            "OPT_D": "4",
+            "ANSWER": 3
+          },
+          {
+            "Q_ID": 20,
+            "Q_TEXT": " What is the output of this program?",
+            "Q_PRGM": "#include <iostream>\\nusing namespace std;\\nint max(int a, int b )\\n{\\n\\treturn ( a > b ? a : b);\\n}\\nint main()\\n{\\n\\tint i = 5;\\n\\tint j = 7;\\n\\tcout << max(i, j );\\n\\treturn 0;\\n}",
+            "OPT_A": "5",
+            "OPT_B": "7",
+            "OPT_C": "either a or b",
+            "OPT_D": "none of the mentioned",
+            "ANSWER": 2
+          },
+          {
+            "Q_ID": 21,
+            "Q_TEXT": " What are the advantages of passing arguments by reference?",
+            "Q_PRGM": "",
+            "OPT_A": " Changes to parameter values within the function also affect the original arguments.",
+            "OPT_B": "There is need to copy parameter values (i.e. less memory used)",
+            "OPT_C": "There is no need to call constructors for parameters (i.e. faster)",
+            "OPT_D": "All of the mentioned",
+            "ANSWER": 4
+          },
+          {
+            "Q_ID": 22,
+            "Q_TEXT": "What is the output of this program?",
+            "Q_PRGM": "#include <iostream>\\nusing namespace std;\\nint Add(int X, int Y, int Z)\\n{\\n\\treturn X + Y;\\n}\\ndouble Add(double X, double Y, double Z)\\n{\\n\\treturn X + Y;\\n}\\nint main()\\n{\\n\\tcout << Add(5, 6);\\n\\tcout << Add(5.5, 6.6);\\n\\treturn 0;\\n}",
+            "OPT_A": "11 12.1",
+            "OPT_B": "12.1 11",
+            "OPT_C": "11 12",
+            "OPT_D": "compile time error",
+            "ANSWER": 4
+          },
+          {
+            "Q_ID": 23,
+            "Q_TEXT": "Pick out the correct statement.",
+            "Q_PRGM": "",
+            "OPT_A": "Increment operator ++ adds 1 to its operand",
+            "OPT_B": "Increment operator ++ adds 2 to its operand",
+            "OPT_C": "Decrement operator ++ subtracts 1 to its operand",
+            "OPT_D": "None of the mentioned",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 24,
+            "Q_TEXT": "What is the output of this program?",
+            "Q_PRGM": "#include <stdio.h>\\n using namespace std;\\nint main()\\n{\\n\\tint a = 21;\\n\\tint c ;\\n\\tc = a++;\\n\\tcout << c;\\n\\treturn 0;\\n}",
+            "OPT_A": "21",
+            "OPT_B": "22",
+            "OPT_C": "23",
+            "OPT_D": "20",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 25,
+            "Q_TEXT": "Where does the object is created?",
+            "Q_PRGM": "",
+            "OPT_A": "class",
+            "OPT_B": "constructor",
+            "OPT_C": "destructor",
+            "OPT_D": "attributes",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 26,
+            "Q_TEXT": "What is the output of this program?",
+            "Q_PRGM": "#include <iostream>\\nusing namespace std;\\nvoid fun(int x, int y)\\n{\\n\\tx = 20;\\n\\ty = 10;\\n}\\nint main()\\n{\\n\\tint x = 10;\\n\\tfun(x, x);\\n\\tcout << x;\\n\\treturn 0;\\n}",
+            "OPT_A": "10",
+            "OPT_B": "20",
+            "OPT_C": "compile time error",
+            "OPT_D": "none of the mentioned",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 27,
+            "Q_TEXT": "Which of the following can derived class inherit?",
+            "Q_PRGM": "",
+            "OPT_A": "members",
+            "OPT_B": "functions",
+            "OPT_C": "both a & b",
+            "OPT_D": "None of the mentioned",
+            "ANSWER": 3
+          },
+          {
+            "Q_ID": 28,
+            "Q_TEXT": "What is the output of this program?",
+            "Q_PRGM": "#include <iostream>\\nusing namespace std;\\nstruct a\\n{\\n\\tint count;\\n};\\nstruct b\\n{\\n\\tint* value;\\n};\\nstruct c : public a, public b\\n{\\n};\\nint main()\\n{\\n\\tc* p = new c;\\n\\tp->value = 0;\\n\\tcout << \"Inherited\";\\n\\treturn 0;\\n}",
+            "OPT_A": "Inherited",
+            "OPT_B": "Error",
+            "OPT_C": "Runtime error",
+            "OPT_D": "None of the mentioned",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 29,
+            "Q_TEXT": "Which design patterns benefit from the multiple inheritance?",
+            "Q_PRGM": "",
+            "OPT_A": "Adapter and observer pattern",
+            "OPT_B": "Code pattern",
+            "OPT_C": "Glue pattern",
+            "OPT_D": "None of the mentioned",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 30,
+            "Q_TEXT": "What is the output of this program?",
+            "Q_PRGM": "#include <iostream>\\nusing namespace std;\\nclass Cat\\n{\\n\\tpublic:\\n\\tint age;\\n\\tint weight;\\n};\\nint main()\\n{\\n\\tCat f;\\n\\tf.age = 56;\\n\\tcout << \"Gates is \" ;\\n\\tcout << f.age << \" years old.\n\";\\n}",
+            "OPT_A": "Gates is",
+            "OPT_B": "Gates is 56 years old",
+            "OPT_C": "Error",
+            "OPT_D": "None of the mentioned",
+            "ANSWER": 2
+          },
+          {
+            "Q_ID": 31,
+            "Q_TEXT": "What is the default access level to a block of data?",
+            "Q_PRGM": "",
+            "OPT_A": "Public",
+            "OPT_B": "Protected",
+            "OPT_C": "Private",
+            "OPT_D": "None of the mentioned",
+            "ANSWER": 3
+          },
+          {
+            "Q_ID": 32,
+            "Q_TEXT": "What is the output of this program?",
+            "Q_PRGM": "#include <iostream>\\n#include <typeinfo>\\nusing namespace std;\\nint main ()\\n{\\n\\tint * a;\\n\\tint b;\\n\\ta = 0; b = 0;\\n\\tif (typeid(a) != typeid(b))\\n\\t{\\n\\t\\tcout << typeid(a).name();\\n\\t\\tcout << typeid(b).name();\\n\\t}\\n\\treturn 0;\\n}",
+            "OPT_A": "Pi",
+            "OPT_B": "i",
+            "OPT_C": "Both a & b",
+            "OPT_D": "f",
+            "ANSWER": 3
+          },
+          {
+            "Q_ID": 33,
+            "Q_TEXT": "Which character is used to terminate the string?",
+            "Q_PRGM": "",
+            "OPT_A": "$",
+            "OPT_B": "Null",
+            "OPT_C": "Empty",
+            "OPT_D": "None of the mentioned",
+            "ANSWER": 2
+          },
+          {
+            "Q_ID": 34,
+            "Q_TEXT": "What is the output of this program?",
+            "Q_PRGM": "#include <iostream>\\n#include <string>\\nusing namespace std;\\nint main ()\\n{\\n\\tstring str;\\n\\tstring str2=\"Steve jobs\";\\n\\tstring str3=\"He foundedapple\";\\n\\tstr.append(str2);\\n\\tstr.append(str3, 6, 3);\\n\\tstr.append(str3.begin() + 6,str3.end());\\n\\tstr.append<int>(5, 0x2E);\\n\\tcout << str << '\n';\\n\\treturn 0;\\n}",
+            "OPT_A": "Steve jobs",
+            "OPT_B": "He founded apple",
+            "OPT_C": "Steve",
+            "OPT_D": "None of the mentioned",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 35,
+            "Q_TEXT": "What will happen if a string is empty?",
+            "Q_PRGM": "",
+            "OPT_A": "It can’t be created",
+            "OPT_B": "Raises an error",
+            "OPT_C": "It can be used",
+            "OPT_D": "None of the mentioned",
+            "ANSWER": 3
+          },
+          {
+            "Q_ID": 36,
+            "Q_TEXT": "What is the output of this program?",
+            "Q_PRGM": "#include <iostream>\\n#include <string>\\nusing namespace std;\\nint main ()\\n{\\n\\tstring str (\"Steve jobs\");\\n\\tcout << str.length();\\n\\treturn 0;\\n}",
+            "OPT_A": "8",
+            "OPT_B": "10",
+            "OPT_C": "12",
+            "OPT_D": "9",
+            "ANSWER": 2
+          },
+          {
+            "Q_ID": 37,
+            "Q_TEXT": "Pick out the correct objects about the instantiation of output stream.",
+            "Q_PRGM": "",
+            "OPT_A": "cout",
+            "OPT_B": "cerr",
+            "OPT_C": "clog",
+            "OPT_D": "All of the mentioned",
+            "ANSWER": 4
+          },
+          {
+            "Q_ID": 38,
+            "Q_TEXT": "What is the output of this program?",
+            "Q_PRGM": " #include <iostream>\\nusing namespace std;\\nint main ()\\n{\\n\\tchar str[] = \"Steve jobs\";\\n\\tint val = 65;\\n\\tchar ch = 'A';\\n\\tcout.width (5);\\t\\tcout << right;\\n\\tcout << val << endl;\\n\\treturn 0;\\n}",
+            "OPT_A": "Steve jobs",
+            "OPT_B": "A",
+            "OPT_C": "5",
+            "OPT_D": "65",
+            "ANSWER": 4
+          },
+          {
+            "Q_ID": 39,
+            "Q_TEXT": "What must be specified when we construct an object of class ostream?",
+            "Q_PRGM": "",
+            "OPT_A": "stream",
+            "OPT_B": "streambuf",
+            "OPT_C": "memory",
+            "OPT_D": "None of the mentioned",
+            "ANSWER": 2
+          },
+          {
+            "Q_ID": 40,
+            "Q_TEXT": "What is the output of this program?",
+            "Q_PRGM": "#include <iostream>\\n#include <locale>\\nusing namespace std;\\nint main()\\n{\\n\\tlocale mylocale(\"\");\\n\\tcout.imbue( mylocale );\\n\\tcout << (double) 3.14159 << endl;\\n\\treturn 0;\\n}",
+            "OPT_A": "3.14",
+            "OPT_B": "3.14159",
+            "OPT_C": "Error",
+            "OPT_D": "None of the mentioned",
+            "ANSWER": 2
+          },
+          {
+            "Q_ID": 41,
+            "Q_TEXT": "The constants are also called as",
+            "Q_PRGM": "",
+            "OPT_A": "const",
+            "OPT_B": "preprocessor",
+            "OPT_C": "literals",
+            "OPT_D": "none of the mentioned",
+            "ANSWER": 3
+          },
+          {
+            "Q_ID": 42,
+            "Q_TEXT": "How the constants are declared?",
+            "Q_PRGM": "",
+            "OPT_A": "const keyword",
+            "OPT_B": "#define preprocessor",
+            "OPT_C": "both a and b",
+            "OPT_D": "None of the mentioned",
+            "ANSWER": 3
+          },
+          {
+            "Q_ID": 43,
+            "Q_TEXT": "Which of the following statement is not true about preprocessor directives?",
+            "Q_PRGM": "",
+            "OPT_A": "These are lines read and processed by the preprocessor",
+            "OPT_B": "They do not produce any code by themselves",
+            "OPT_C": "These must be written on their own line",
+            "OPT_D": "They end with a semicolon",
+            "ANSWER": 4
+          },
+          {
+            "Q_ID": 44,
+            "Q_TEXT": "How to declare a wide character in string literal?",
+            "Q_PRGM": "",
+            "OPT_A": "L prefix",
+            "OPT_B": "l prefix",
+            "OPT_C": "W prefix",
+            "OPT_D": "none of the mentioned",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 45,
+            "Q_TEXT": "When does the void pointer can be dereferenced?",
+            "Q_PRGM": "",
+            "OPT_A": "when it doesn’t point to any value",
+            "OPT_B": "when it cast to another type of object",
+            "OPT_C": "using delete keyword",
+            "OPT_D": "none of the mentioned",
+            "ANSWER": 2
+          },
+          {
+            "Q_ID": 46,
+            "Q_TEXT": "A void pointer cannot point to which of these?",
+            "Q_PRGM": "",
+            "OPT_A": "methods in c++",
+            "OPT_B": "class member in c++",
+            "OPT_C": "all of the mentioned",
+            "OPT_D": "none of the mentioned",
+            "ANSWER": 4
+          },
+          {
+            "Q_ID": 47,
+            "Q_TEXT": "What we can’t do on a void pointer?",
+            "Q_PRGM": "",
+            "OPT_A": "pointer arithemetic",
+            "OPT_B": "pointer functions",
+            "OPT_C": "both of the mentioned",
+            "OPT_D": "none of the mentioned",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 48,
+            "Q_TEXT": "It is guaranteed that a ____ has atleast 8bits and a ____ has atleast 16 bits.",
+            "Q_PRGM": "",
+            "OPT_A": "int, float",
+            "OPT_B": "char, int",
+            "OPT_C": "bool, char",
+            "OPT_D": "char, short",
+            "ANSWER": 4
+          },
+          {
+            "Q_ID": 49,
+            "Q_TEXT": "Size of C++ objects are expressed in terms of multiples of the size of a ____ and the size of a char is____.",
+            "Q_PRGM": "",
+            "OPT_A": "char, 1",
+            "OPT_B": "int, 1",
+            "OPT_C": "float, 8",
+            "OPT_D": "char, 4",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 50,
+            "Q_TEXT": "Identify the incorrect statement",
+            "Q_PRGM": "",
+            "OPT_A": "reference is the alternate name of the object",
+            "OPT_B": "A reference value once defined can be reassigned",
+            "OPT_C": "A reference value once defined cannot be reassigned",
+            "OPT_D": "none of the mentioned",
+            "ANSWER": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "CAT_ID": 3,
+    "CAT_NAME": "JAVA",
+    "LEVELS": [
+      {
+        "LEVEL_ID": 1,
+        "LEVEL_NAME": "Practical",
+        "LOCK_STATUS": 1,
+        "QUESTIONS": [
+          {
+            "Q_ID": 1,
+            "Q_TEXT": "TestQuestion",
+            "Q_PRGM": "",
+            "OPT_A": "A",
+            "OPT_B": "A",
+            "OPT_C": "A",
+            "OPT_D": "A",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 2,
+            "Q_TEXT": "TestQuestion",
+            "Q_PRGM": "",
+            "OPT_A": "A",
+            "OPT_B": "A",
+            "OPT_C": "A",
+            "OPT_D": "A",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 3,
+            "Q_TEXT": "TestQuestion",
+            "Q_PRGM": "",
+            "OPT_A": "A",
+            "OPT_B": "A",
+            "OPT_C": "A",
+            "OPT_D": "A",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 4,
+            "Q_TEXT": "TestQuestion",
+            "Q_PRGM": "",
+            "OPT_A": "A",
+            "OPT_B": "A",
+            "OPT_C": "A",
+            "OPT_D": "A",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 5,
+            "Q_TEXT": "TestQuestion",
+            "Q_PRGM": "",
+            "OPT_A": "A",
+            "OPT_B": "A",
+            "OPT_C": "A",
+            "OPT_D": "A",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 6,
+            "Q_TEXT": "TestQuestion",
+            "Q_PRGM": "",
+            "OPT_A": "A",
+            "OPT_B": "A",
+            "OPT_C": "A",
+            "OPT_D": "A",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 7,
+            "Q_TEXT": "TestQuestion",
+            "Q_PRGM": "",
+            "OPT_A": "A",
+            "OPT_B": "A",
+            "OPT_C": "A",
+            "OPT_D": "A",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 8,
+            "Q_TEXT": "TestQuestion",
+            "Q_PRGM": "",
+            "OPT_A": "A",
+            "OPT_B": "A",
+            "OPT_C": "A",
+            "OPT_D": "A",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 9,
+            "Q_TEXT": "TestQuestion",
+            "Q_PRGM": "",
+            "OPT_A": "A",
+            "OPT_B": "A",
+            "OPT_C": "A",
+            "OPT_D": "A",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 10,
+            "Q_TEXT": "TestQuestion",
+            "Q_PRGM": "",
+            "OPT_A": "A",
+            "OPT_B": "A",
+            "OPT_C": "A",
+            "OPT_D": "A",
+            "ANSWER": 1
+          }
+        ]
+      },
+      {
+        "LEVEL_ID": 2,
+        "LEVEL_NAME": "Theory",
+        "LOCK_STATUS": 1,
+        "QUESTIONS": [
+          {
+            "Q_ID": 1,
+            "Q_TEXT": "TestQuestion",
+            "Q_PRGM": "",
+            "OPT_A": "A",
+            "OPT_B": "A",
+            "OPT_C": "A",
+            "OPT_D": "A",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 2,
+            "Q_TEXT": "TestQuestion",
+            "Q_PRGM": "",
+            "OPT_A": "A",
+            "OPT_B": "A",
+            "OPT_C": "A",
+            "OPT_D": "A",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 3,
+            "Q_TEXT": "TestQuestion",
+            "Q_PRGM": "",
+            "OPT_A": "A",
+            "OPT_B": "A",
+            "OPT_C": "A",
+            "OPT_D": "A",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 4,
+            "Q_TEXT": "TestQuestion",
+            "Q_PRGM": "",
+            "OPT_A": "A",
+            "OPT_B": "A",
+            "OPT_C": "A",
+            "OPT_D": "A",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 5,
+            "Q_TEXT": "TestQuestion",
+            "Q_PRGM": "",
+            "OPT_A": "A",
+            "OPT_B": "A",
+            "OPT_C": "A",
+            "OPT_D": "A",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 6,
+            "Q_TEXT": "TestQuestion",
+            "Q_PRGM": "",
+            "OPT_A": "A",
+            "OPT_B": "A",
+            "OPT_C": "A",
+            "OPT_D": "A",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 7,
+            "Q_TEXT": "TestQuestion",
+            "Q_PRGM": "",
+            "OPT_A": "A",
+            "OPT_B": "A",
+            "OPT_C": "A",
+            "OPT_D": "A",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 8,
+            "Q_TEXT": "TestQuestion",
+            "Q_PRGM": "",
+            "OPT_A": "A",
+            "OPT_B": "A",
+            "OPT_C": "A",
+            "OPT_D": "A",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 9,
+            "Q_TEXT": "TestQuestion",
+            "Q_PRGM":"",
+            "OPT_A": "A",
+            "OPT_B": "A",
+            "OPT_C": "A",
+            "OPT_D": "A",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 10,
+            "Q_TEXT": "TestQuestion",
+            "Q_PRGM":"",
+            "OPT_A": "A",
+            "OPT_B": "A",
+            "OPT_C": "A",
+            "OPT_D": "A",
+            "ANSWER": 1
+          }
+        ]
+      },
+      {
+        "LEVEL_ID": 3,
+        "LEVEL_NAME": "Miscellaneous",
+        "LOCK_STATUS": 1,
+        "QUESTIONS": [
+          {
+            "Q_ID": 1,
+            "Q_TEXT": "What is the range of data type short in Java?",
+            "Q_PRGM": "",
+            "OPT_A": "-128 to 127",
+            "OPT_B": "-32768 to 32767",
+            "OPT_C": "-2147483648 to 2147483647",
+            "OPT_D": "None of the mentioned",
+            "ANSWER": 2
+          },
+          {
+            "Q_ID": 2,
+            "Q_TEXT": "What is the output of this program?",
+            "Q_PRGM": "class average \\n{\\n\\tpublic static void main(String args[])\\n\\t{\\n\\t\\tdouble num[] = {5.5, 10.1, 11, 12.8, 56.9, 2.5};\\n\\t\\tdouble result;\\n\\t\\tresult = 0;\\n\\t\\tfor (int i = 0; i < 6; ++i) \\n\\t\\t\\tresult = result + num[i];\\n\\t\\tSystem.out.print(result/6);\\n \\t} \\n}",
+            "OPT_A": "16.34",
+            "OPT_B": "16.566666644",
+            "OPT_C": "16.46666666666667",
+            "OPT_D": "16.46666666666666",
+            "ANSWER": 3
+          },
+          {
+            "Q_ID": 3,
+            "Q_TEXT": "Which data type value is returned by all transcendental math functions?",
+            "Q_PRGM": "",
+            "OPT_A": "int",
+            "OPT_B": "float",
+            "OPT_C": "double",
+            "OPT_D": "long",
+            "ANSWER": 3
+          },
+          {
+            "Q_ID": 4,
+            "Q_TEXT": "What is the output of this program?",
+            "Q_PRGM": "class conversion\\n{\\n\\tpublic static void main(String args[]) \\n\\t{\\n\\t\\tdouble a = 295.04;\\n\\t\\tint  b = 300;\\n\\t\\tbyte c = (byte) a;\\n\\t\\tbyte d = (byte) b;\\n\\t\\tSystem.out.println(c + \" \"  + d);\\n\\t} }",
+            "OPT_A": "38 43",
+            "OPT_B": "39 44",
+            "OPT_C": " 295 300",
+            "OPT_D": "295.04 300",
+            "ANSWER": 2
+          },
+          {
+            "Q_ID": 5,
+            "Q_TEXT": "Which of these coding types is used for data type characters in Java?",
+            "Q_PRGM": "",
+            "OPT_A": "ASCII",
+            "OPT_B": "ISO-LATIN-1",
+            "OPT_C": "UNICODE",
+            "OPT_D": "None of the mentioned",
+            "ANSWER": 3
+          },
+          {
+            "Q_ID": 6,
+            "Q_TEXT": " What is the output of this program?",
+            "Q_PRGM": "class array_output\\n{\\n\\tpublic static void main(String args[]) \\n\\t{\\n\\t\\tchar array_variable [] = new char[10];\\n\\t\\t\\tfor (int i = 0; i < 10; ++i) {\\n\\t\\t\\t\\tarray_variable[i] = 'i';\\n\\t\\t\\t\\tSystem.out.print(array_variable[i] + \"  \" );\\n\\t\\t\\t\\ti++;\\t\\t\\t}\\t\\t} \\t}",
+            "OPT_A": "i i i i i",
+            "OPT_B": "0 1 2 3 4",
+            "OPT_C": "i j k l m",
+            "OPT_D": "None of the mentioned",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 7,
+            "Q_TEXT": " Which of these is incorrect string literal?",
+            "Q_PRGM": "",
+            "OPT_A": "“Hello World”",
+            "OPT_B": "“Hello\nWorld”",
+            "OPT_C": " “”Hello World””",
+            "OPT_D": " “Hello\\nworld”",
+            "ANSWER": 4
+          },
+          {
+            "Q_ID": 8,
+            "Q_TEXT": " What is the output of this program?",
+            "Q_PRGM": "class dynamic_initialization \\n{\\n\\tpublic static void main(String args[]) \\n\\t{\\n\\t\\tdouble a, b;\\n\\t\\ta = 3.0;\\n\\t\\tb = 4.0;\\n\\t\\tdouble c = Math.sqrt(a * a + b * b);\\n\\t\\tSystem.out.println(c);\\n\\t} \\n}",
+            "OPT_A": "5.0",
+            "OPT_B": "25.0",
+            "OPT_C": "7.0",
+            "OPT_D": "Compilation Error",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 9,
+            "Q_TEXT": "Which of these operators is used to allocate memory to array variable in Java?",
+            "Q_PRGM": "",
+            "OPT_A": "malloc",
+            "OPT_B": "alloc",
+            "OPT_C": "new",
+            "OPT_D": "new malloc",
+            "ANSWER": 3
+          },
+          {
+            "Q_ID": 10,
+            "Q_TEXT": "What is the output of this program?",
+            "Q_PRGM": "class evaluate \\n{\\n\\tpublic static void main(String args[]) \\n\\t{\\n\\t\\tint arr[] = new int[] {0 , 1, 2, 3, 4, 5, 6, 7, 8, 9};\\n\\t\\tint n = 6;\\n\\t\\tn = arr[arr[n] / 2];\\n\\t\\tSystem.out.println(arr[n] / 2);\\n\\t}\\n}",
+            "OPT_A": "3",
+            "OPT_B": "0",
+            "OPT_C": "6",
+            "OPT_D": "1",
+            "ANSWER": 4
+          },
+          {
+            "Q_ID": 11,
+            "Q_TEXT": "Which of these is necessary to specify at time of array initialization?",
+            "Q_PRGM": "",
+            "OPT_A": "Row",
+            "OPT_B": "Column",
+            "OPT_C": "Both Row and Column",
+            "OPT_D": "None of the mentioned",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 12,
+            "Q_TEXT": "What is the output of this program?",
+            "Q_PRGM": "class increment\\n{\\n\\tpublic static void main(String args[])\\n\\t{\\n\\t\\tdouble var1 = 1 + 5; \\n\\t\\tdouble var2 = var1 / 4;\\n\\t\\tint var3 = 1 + 5;\\t\n\\t\\tint var4 = var3 / 4;\\n\\t\\tSystem.out.print(var2 + \" \" + var4);\\n\\t} \\n}",
+            "OPT_A": "1 1",
+            "OPT_B": "0 1",
+            "OPT_C": "1.5 1",
+            "OPT_D": "1.5 1.0",
+            "ANSWER": 3
+          },
+          {
+            "Q_ID": 13,
+            "Q_TEXT": " With x = 0, which of the following are legal lines of Java code for changing the value of x to 1?\\n1. x++;\\n2. x = x + 1;\\n3. x += 1;\\n4. x =+ 1;\\n",
+            "Q_PRGM": "",
+            "OPT_A": "1, 2 & 3",
+            "OPT_B": "1 & 4",
+            "OPT_C": "1, 2, 3 & 4",
+            "OPT_D": "3 & 2",
+            "ANSWER": 4
+          },
+          {
+            "Q_ID": 14,
+            "Q_TEXT": "What is the output of this program?",
+            "Q_PRGM": "class increment\\n {\\n\\tpublic static void main(String args[]) \\t\\t{\\n\\tint g = 3;\\n\\tSystem.out.print(++g * 8);\\n\\t} \\}",
+            "OPT_A": "25",
+            "OPT_B": "24",
+            "OPT_C": "32",
+            "OPT_D": "33",
+            "ANSWER": 3
+          },
+          {
+            "Q_ID": 15,
+            "Q_TEXT": " What is the stored in the object obj in following lines of code?\\nbox obj;",
+            "Q_PRGM": "",
+            "OPT_A": "Memory address of allocated memory of object.",
+            "OPT_B": "NULL",
+            "OPT_C": "Any arbitrary pointer",
+            "OPT_D": "Garbage",
+            "ANSWER": 2
+          },
+          {
+            "Q_ID": 16,
+            "Q_TEXT": "What is the output of this program?",
+            "Q_PRGM": " class main_class\\n {\\n\\tpublic static void main(String args[])\\n\\t{\\n\\t\\tint x = 9;\\n\\t\\tif (x == 9)\\n \\t\\t\\t{\\n \\t\\t\\tint x = 8;\\n\\t\\t\\tSystem.out.println(x);\\n\\t\\t}\\n\\t}\\n }",
+            "OPT_A": "9",
+            "OPT_B": "8",
+            "OPT_C": "Compilation error",
+            "OPT_D": "Runtime error",
+            "ANSWER": 3
+          },
+          {
+            "Q_ID": 17,
+            "Q_TEXT": "Which operator is used by Java run time implementations to free the memory of an object when it is no longer needed?",
+            "Q_PRGM": "",
+            "OPT_A": "delete",
+            "OPT_B": "free",
+            "OPT_C": "new",
+            "OPT_D": "None of the mentioned",
+            "ANSWER": 4
+          },
+          {
+            "Q_ID": 18,
+            "Q_TEXT": "What is the output of this program?",
+            "Q_PRGM": "class test\\n{\\n\\tint a;\\n\\tint b;\\n\\tvoid meth(int i , int j)\\n\\t{\\n\\t\\ti *= 2;\\n\\t\\tj /= 2;\\n\\t}\\n}\\nclass Output\\n{\\n\\tpublic static void main(String args[])\\n\\t{\\n\\t\\ttest obj = new test();\\n\\t\\tint a = 10;\\n\\t\\tint b = 20;\\n\\t\\tobj.meth(a , b);\\n\\t\\tSystem.out.println(a + \" \" + b);\\n\\t} \\n}",
+            "OPT_A": "10 20",
+            "OPT_B": "20 10",
+            "OPT_C": "20 40",
+            "OPT_D": "40 20",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 19,
+            "Q_TEXT": " Which of these can be overloaded?",
+            "Q_PRGM": "",
+            "OPT_A": "Methods",
+            "OPT_B": "Constructors",
+            "OPT_C": "All of the mentioned",
+            "OPT_D": "None of the mentioned",
+            "ANSWER": 3
+          },
+          {
+            "Q_ID": 20,
+            "Q_TEXT": "What is the output of this program?",
+            "Q_PRGM": "class access//n{//n//tpublic int x;//n//tprivate int y;//n\\tvoid cal(int a, int b)\\t\\t{\\t\\t\\tx =  a + 1;\\n\\t\\ty =  b;\\n\\t}\\n}\\nclass access_specifier\\n{\\n\\tpublic static void main(String args[])\\n\\t{\\n\\t\\taccess obj = new access();\\n\\t\\tobj.cal(2, 3);\\n\\t\\tSystem.out.println(obj.x + \" \" + obj.y);\\n\\t}\\n}",
+            "OPT_A": "3 3",
+            "OPT_B": "2 3",
+            "OPT_C": "Runtime Error",
+            "OPT_D": "Compilation Error",
+            "ANSWER": 3
+          },
+          {
+            "Q_ID": 21,
+            "Q_TEXT": "Which of these is used as default for a member of a class if no access specifier is used for it?",
+            "Q_PRGM": "",
+            "OPT_A": "private",
+            "OPT_B": "public",
+            "OPT_C": "public, within its own package",
+            "OPT_D": "protected",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 22,
+            "Q_TEXT": "What is the output of this program?",
+            "Q_PRGM": "class static_out\\n{\\n\\tstatic int x;\\n\\tstatic int y;\\n\\tvoid add(int a , int b)\\n\\t{\\n\\t\\tx = a + b;\\n\\t\\ty = x + b;\\n\\t}\\n}\\nclass static_use\\n{\\n\\tpublic static void main(String args[])\\n\\t{\\n\\t\\tstatic_out obj1 = new static_out();\\n\\t\\tstatic_out obj2 = new static_out();\\n   \\t\\tint a = 2;\\n\\t\\tobj1.add(a, a + 1);\\n\\t\\tobj2.add(5, a);\\n\\t\\tSystem.out.println(obj1.x + \" \" + obj2.y);\\n\\t}\\n\"}",
+            "OPT_A": "7 7",
+            "OPT_B": "6 6",
+            "OPT_C": "7 9",
+            "OPT_D": "9 7",
+            "ANSWER": 3
+          },
+          {
+            "Q_ID": 23,
+            "Q_TEXT": "Which of these keywords is used to prevent content of a variable from being modified?",
+            "Q_PRGM": "",
+            "OPT_A": "final",
+            "OPT_B": "last",
+            "OPT_C": "static",
+            "OPT_D": "constant",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 24,
+            "Q_TEXT": "What is the output of this program?",
+            "Q_PRGM": "class string_class\\n{\\n\\tpublic static void main(String args[])\\n\\t{\\n\\t\\tString obj = \" hello\";\\n\\t\\tString obj1 = \"world\";\\n\\t\\tString obj2 = obj;\\n\\t\\tobj2 = \"world\";\\n\\t\\tSystem.out.println(obj + \" \" + obj2);\\n\\t}\\n}",
+            "OPT_A": "hello hello",
+            "OPT_B": "Compilation Error",
+            "OPT_C": "hello world",
+            "OPT_D": "helloworld",
+            "ANSWER": 3
+          },
+          {
+            "Q_ID": 25,
+            "Q_TEXT": "Which of the following statements are incorrect?",
+            "Q_PRGM": "",
+            "OPT_A": "String is a class.",
+            "OPT_B": "Strings in java are mutable.",
+            "OPT_C": "Every string is an object of class String.",
+            "OPT_D": "Java defines a peer class of String, called StringBuffer, which allows string to be altered.",
+            "ANSWER": 2
+          },
+          {
+            "Q_ID": 26,
+            "Q_TEXT": "What is the output of this program?",
+            "Q_PRGM": "class A \\n{\\n\\tint i;\\n\\tvoid display()\\n\\t{\\n\\t\\tSystem.out.println(i);\\n\\t}\\n}\\nclass B extends A\n{\\n\\tint j;\\n\\tvoid display()\\n\\t{\\n\\t\\tSystem.out.println(j);\\n\\t}\\n}\\nclass inheritance_demo\\n{\\n\\tpublic static void main(String args[])\\n\\t{\\n\\t\\tB obj = new B();\\n\\t\\tobj.i=1;\\n\\t\\tobj.j=2;\\n\\t\\tobj.display();\\n\\t}\\n}",
+            "OPT_A": "0",
+            "OPT_B": "1",
+            "OPT_C": "2",
+            "OPT_D": "Compilation Error",
+            "ANSWER": 3
+          },
+          {
+            "Q_ID": 27,
+            "Q_TEXT": "Which of these operators can be used to get run time information about an object?",
+            "Q_PRGM": "",
+            "OPT_A": "getInfo",
+            "OPT_B": "Info",
+            "OPT_C": "instanceof",
+            "OPT_D": "getinfoof",
+            "ANSWER": 3
+          },
+          {
+            "Q_ID": 28,
+            "Q_TEXT": "What is the output of this program?",
+            "Q_PRGM": "class multithreaded_programing\\n {\\npublic static void main(String args[])\\n\\t{\\n\\t\\tThread t = Thread.currentThread();\\n\\t\\tSystem.out.println(t);\\n\\t}\\n}",
+            "OPT_A": "Thread[5,main]",
+            "OPT_B": "Thread[main,5]",
+            "OPT_C": "Thread[main,0]",
+            "OPT_D": "Thread[main,5,main]",
+            "ANSWER": 4
+          },
+          {
+            "Q_ID": 29,
+            "Q_TEXT": "Which of these are types of multitasking?",
+            "Q_PRGM": "",
+            "OPT_A": "Process based",
+            "OPT_B": "Thread based",
+            "OPT_C": "Process and Thread based",
+            "OPT_D": "None of the mentioned",
+            "ANSWER": 3
+          },
+          {
+            "Q_ID": 30,
+            "Q_TEXT": "What is the output of this program?",
+            "Q_PRGM": "package pkg;\\nclass display\\n {\\n\\tint x;\\n\\tvoid show()\\n\\t{\\n\\t\\tif (x>1)\\n\\t\\t\\tSystem.out.print(x + \" \");\\n\\t}\\n}\\nclass packages\\n{\\n\\tpublicstaticvoidmain(String args[])\\n\\t{\\n\\t\\tdisplay[]arr=newdisplay[3];\\n\\t\\tfor(inti=0;i<3;i++)\\n\\t\\t\\tarr[i]=newdisplay();\\n\\t\\tarr[0].x = 0;\\n\\t\\tarr[1].x = 1;\\n\\t\\tarr[2].x = 2;\\n\\t\\tfor (int i = 0; i <3;++i)\\n\\t\\t\\tarr[i].show();\\n\\t\\t}}\\nNote : packages.class file is in directory pkg;",
+            "OPT_A": "0",
+            "OPT_B": "1",
+            "OPT_C": "2",
+            "OPT_D": "0 1 2",
+            "ANSWER": 3
+          },
+          {
+            "Q_ID": 31,
+            "Q_TEXT": "Which of this access specifies can be used for a class so that its members can be accessed by a different class in the same package?",
+            "Q_PRGM": "",
+            "OPT_A": "Public",
+            "OPT_B": "Protected",
+            "OPT_C": "No Modifier",
+            "OPT_D": "All of the mentioned",
+            "ANSWER": 4
+          },
+          {
+            "Q_ID": 32,
+            "Q_TEXT": "What is the output of this program?",
+            "Q_PRGM": "class newthread implements Runnable\\n {\\n\\tThread t;\\n\\tnewthread()\\n \\t{\\n\\t\\tt = new Thread(this,\"MyThread\");\\n\\t\\tt.start();\\n\\t}\\n\\tpublic void run()\\n \\t{\\n\\t\\tSystem.out.println(t);\\n\\t}\\n}\\nclass multithreaded_programing\\n {\\n\\tpublic static void main(String args[])\\n \\t{\\n\\t\\tnew newthread();\\n\\t}\\n}",
+            "OPT_A": "My Thread",
+            "OPT_B": "Thread[My Thread,5,main]",
+            "OPT_C": "Compilation Error",
+            "OPT_D": "Runtime Error",
+            "ANSWER": 2
+          },
+          {
+            "Q_ID": 33,
+            "Q_TEXT": "What is the default value of priority variable MIN_PRIORITY AND MAX_PRIORITY?",
+            "Q_PRGM": "",
+            "OPT_A": "0 & 256",
+            "OPT_B": "0 & 1",
+            "OPT_C": "1 & 10",
+            "OPT_D": "1 & 256",
+            "ANSWER": 3
+          },
+          {
+            "Q_ID": 34,
+            "Q_TEXT": "What is the output of this program?",
+            "Q_PRGM": "class exception_handling\\n {\\n\\tpublic static void main(String args[])\\n \\t{\\n\\t\\ttry\\t\\t\\t{\\n\\t\\t\\tthrow new NullPointerException(\"Hello\");\\n\\t\\t\\tSystem.out.print(\"A\");\\n\\t\\t}\\n\\t\\tcatch(ArithmeticException e)\\n \\t\\t{\\n\\t\\t\\tSystem.out.print(\"B\");\\n\\t\\t}\\n\\t}\\n}",
+            "OPT_A": "A",
+            "OPT_B": "B",
+            "OPT_C": "Hello",
+            "OPT_D": "Runtime Error",
+            "ANSWER": 2
+          },
+          {
+            "Q_ID": 35,
+            "Q_TEXT": "Which of these handles the exception when no catch is used?",
+            "Q_PRGM": "",
+            "OPT_A": "Default handler",
+            "OPT_B": "finally",
+            "OPT_C": "throw handler",
+            "OPT_D": "Java run time system",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 36,
+            "Q_TEXT": "What is the output of this program?",
+            "Q_PRGM": "class exception_handling\\n {\\n\\tpublic static void main(String args[])\\n \\t{\\n\\t\\ttry\\n \\t\\t\\t{\\n\\t\\t\\t\\tSystem.out.print(\"Hello + \" \" + 1 / 0);\\n\\t\\t\\t}\\t\\tcatch(ArithmeticException e)\\n \\t\\t{\\n\\t\\t\\tSystem.out.print(\"World\");\\n\\t\\t}\\n\\t}\\n}",
+            "OPT_A": "Hello",
+            "OPT_B": "World",
+            "OPT_C": "HelloWorld",
+            "OPT_D": "Hello World",
+            "ANSWER": 2
+          },
+          {
+            "Q_ID": 37,
+            "Q_TEXT": "When does Exceptions in Java arises in code sequence?",
+            "Q_PRGM": "",
+            "OPT_A": "Run Time",
+            "OPT_B": "Compilation Time",
+            "OPT_C": "Can Occur Any Time",
+            "OPT_D": "None of the mentioned",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 38,
+            "Q_TEXT": "What is the output of this program?",
+            "Q_PRGM": "class recursion\\n{\\n\\tint func (int n)\\n \\t{\\n\\t\\tint result;\\n\\t\\tresult = func (n - 1);\\n\\t\\nreturn result;\\n\\t}\\n}\\n class Output\\n {\\n\\tpublic static void main(String args[])\\n\\t{\\n\\t\\trecursion obj = new recursion() ;\\n\\t\\tSystem.out.print(obj.func(12));\\n\\t}\\n}",
+            "OPT_A": "0",
+            "OPT_B": "1",
+            "OPT_C": "Compilation Error",
+            "OPT_D": "Runtime Error",
+            "ANSWER": 4
+          },
+          {
+            "Q_ID": 39,
+            "Q_TEXT": "Which of these is not abstract?",
+            "Q_PRGM": "",
+            "OPT_A": "Thread",
+            "OPT_B": "AbstractList",
+            "OPT_C": "List",
+            "OPT_D": "None of the Mentioned",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 40,
+            "Q_TEXT": "What is the output of this program?",
+            "Q_PRGM": "class A\\n {\\n\\tpublic int i;\\n\\tprivate int j;\\n}\\nclass B extends A\\n{\\n\\tvoid display()\\n \\t{\\n\\t\\tsuper.j = super.i + 1;\\n\\t\\tSystem.out.println(super.i + \"\" + super.j);\\n\\t}\\n}\\n    class inheritance\\n{\\n\\tpublic static void main(String args[])\\n\\t{\\n\\t\\tB obj = new B();\\n\\t\\tobj.i=1;\\n\\t\\tobj.j=2;\\n\\t\\tobj.display();\\n\\t}\\n}",
+            "OPT_A": "2 2",
+            "OPT_B": "3 3",
+            "OPT_C": "Runtime Error",
+            "OPT_D": "Compilation Error",
+            "ANSWER": 4
+          },
+          {
+            "Q_ID": 41,
+            "Q_TEXT": "What is an event in delegation event model used by Java programming language?",
+            "Q_PRGM": "",
+            "OPT_A": "An event is an object that describes a state change in a source.",
+            "OPT_B": "An event is an object that describes a state change in processing.",
+            "OPT_C": "An event is an object that describes any change by the user and system.",
+            "OPT_D": "An event is a class used for defining object, to create events.",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 42,
+            "Q_TEXT": " Which of these methods are used to register a keyboard event listener?",
+            "Q_PRGM": "",
+            "OPT_A": "KeyListener()",
+            "OPT_B": "addKistener()",
+            "OPT_C": "addKeyListener()",
+            "OPT_D": "eventKeyboardListener()",
+            "ANSWER": 3
+          },
+          {
+            "Q_ID": 43,
+            "Q_TEXT": "Event class is defined in which of these libraries?",
+            "Q_PRGM": "",
+            "OPT_A": "java.io",
+            "OPT_B": "java.lang",
+            "OPT_C": "java.net",
+            "OPT_D": "java.util",
+            "ANSWER": 4
+          },
+          {
+            "Q_ID": 44,
+            "Q_TEXT": "Which of these methods can be used to determine the type of event?",
+            "Q_PRGM": "",
+            "OPT_A": "getID()",
+            "OPT_B": "getSource()",
+            "OPT_C": "getEvent()",
+            "OPT_D": "getEventObject()",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 45,
+            "Q_TEXT": "Which of these class is super class of all the events?",
+            "Q_PRGM": "",
+            "OPT_A": "EventObject",
+            "OPT_B": "EventClass",
+            "OPT_C": "ActionEvent",
+            "OPT_D": "ItemEvent",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 46,
+            "Q_TEXT": "Which of these interfaces define four methods?",
+            "Q_PRGM": "",
+            "OPT_A": " ComponentListener",
+            "OPT_B": "ContainerListener",
+            "OPT_C": "ActionListener",
+            "OPT_D": "InputListener",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 47,
+            "Q_TEXT": "Which of these is superclass of all Adapter classes?",
+            "Q_PRGM": "",
+            "OPT_A": "Applet",
+            "OPT_B": "ComponentEvent",
+            "OPT_C": "Event",
+            "OPT_D": "InputEvent",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 48,
+            "Q_TEXT": "Which of these methods can be used to know the type of focus change?",
+            "Q_PRGM": "",
+            "OPT_A": "typeFocus()",
+            "OPT_B": "typeEventFocus()",
+            "OPT_C": "isTemporary()",
+            "OPT_D": "isPermanent()",
+            "ANSWER": 3
+          },
+          {
+            "Q_ID": 49,
+            "Q_TEXT": "Which of these events will be notified if scroll bar is manipulated?",
+            "Q_PRGM": "",
+            "OPT_A": "ActionEvent",
+            "OPT_B": "ComponentEvent",
+            "OPT_C": "AdjustmentEvent",
+            "OPT_D": "WindowEvent",
+            "ANSWER": 3
+          },
+          {
+            "Q_ID": 50,
+            "Q_TEXT": "Which of these methods can be used to obtain the coordinates of a mouse?",
+            "Q_PRGM": "",
+            "OPT_A": "getPoint()",
+            "OPT_B": "getCoordinates()",
+            "OPT_C": "getMouseXY()",
+            "OPT_D": "getMouseCordinates()",
+            "ANSWER": 1
+          },
+          {
+            "Q_ID": 51,
+            "Q_TEXT": "Which of these methods can be used to change location of an event?",
+            "Q_PRGM": "",
+            "OPT_A": "ChangePoint()",
+            "OPT_B": "TranslatePoint()",
+            "OPT_C": "ChangeCordinates()",
+            "OPT_D": "TranslateCordinates()",
+            "ANSWER": 2
+          },
+          {
+            "Q_ID": 52,
+            "Q_TEXT": "Which of these are integer constants of TextEvent class?",
+            "Q_PRGM": "",
+            "OPT_A": "TEXT_CHANGED",
+            "OPT_B": "TEXT_FORMAT_CHANGED",
+            "OPT_C": "TEXT_VALUE_CHANGED",
+            "OPT_D": "TEXT_sIZE_CHANGED",
+            "ANSWER": 2
+          },
+          {
+            "Q_ID": 53,
+            "Q_TEXT": "MouseEvent is subclass of which of these classes?",
+            "Q_PRGM": "",
+            "OPT_A": "ComponentEvent",
+            "OPT_B": "ContainerEvent",
+            "OPT_C": "ItemEvent",
+            "OPT_D": "InputEvent",
+            "ANSWER": 4
+          },
+          {
+            "Q_ID": 54,
+            "Q_TEXT": "Which of these is superclass of WindowEvent class?",
+            "Q_PRGM": "",
+            "OPT_A": "WindowEvent",
+            "OPT_B": "ComponentEvent",
+            "OPT_C": "ItemEvent",
+            "OPT_D": "InputEvent",
+            "ANSWER": 2
+          },
+          {
+            "Q_ID": 55,
+            "Q_TEXT": "Which of these methods can be used to obtain the command name for invoking ActionEvent object?",
+            "Q_PRGM": "",
+            "OPT_A": "getCommand()",
+            "OPT_B": "getActionCommand()",
+            "OPT_C": "getActionEvent()",
+            "OPT_D": "getActionEventCommand()",
+            "ANSWER": 2
+          }
+        ]
+      }
+    ]
+  }
+]

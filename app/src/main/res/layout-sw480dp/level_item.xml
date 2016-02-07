@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.codebook.views.LevelItemView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_triangle"
+    android:layout_width="match_parent"
+    android:layout_height="240dp"
+    android:layout_marginTop="-120dp"
+    android:clickable="true"
+    android:foreground="?attr/selectableItemBackground">
+
+    <TextView
+        android:id="@+id/item_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="30dp"
+        android:textSize="45sp" />
+
+</com.codebook.views.LevelItemView>
