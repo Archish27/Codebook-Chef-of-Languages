@@ -9,11 +9,11 @@
     <TextView
         android:id="@+id/tvQuestionText"
         android:layout_width="fill_parent"
-        android:layout_height="47dp"
-        android:layout_marginTop="75dp"
-        android:background="@color/black_light"
+        android:layout_height="50dp"
+        android:layout_marginTop="65dp"
+
         android:gravity="center_vertical|center_horizontal"
-        android:textColor="@color/text_color"
+        android:textColor="@color/black_light"
         android:textSize="17sp" />
 
 
@@ -22,21 +22,24 @@
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:layout_marginBottom="15dp"
-            android:background="@color/black_light"
+            android:textColor="@color/black_light"
             android:textSize="18sp"
+
             android:scrollbars="vertical"/>
 
 
     <LinearLayout
+        android:id="@+id/questionsLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
+
         android:orientation="vertical">
 
         <android.support.percent.PercentRelativeLayout
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:orientation="horizontal">
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/tvOptionA"
@@ -48,21 +51,21 @@
                 android:paddingTop="20dp"
                 android:textColor="@color/black_light"
                 android:textSize="14sp"
-                app:layout_widthPercent="50%" />
+                app:layout_widthPercent="100%" />
 
 
             <TextView
                 android:id="@+id/tvOptionB"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
+                android:layout_below="@+id/tvOptionA"
                 android:background="@drawable/options_button"
                 android:gravity="center_vertical|center_horizontal"
                 android:paddingBottom="20dp"
                 android:paddingTop="20dp"
                 android:textColor="@color/black_light"
                 android:textSize="14sp"
-                app:layout_widthPercent="50%" />
+                app:layout_widthPercent="100%" />
 
         </android.support.percent.PercentRelativeLayout>
 
@@ -82,21 +85,21 @@
                 android:paddingTop="20dp"
                 android:textColor="@color/black_light"
                 android:textSize="14sp"
-                app:layout_widthPercent="50%" />
+                app:layout_widthPercent="100%" />
 
 
             <TextView
                 android:id="@+id/tvOptionD"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
+                android:layout_below="@+id/tvOptionC"
                 android:background="@drawable/options_button"
                 android:gravity="center_vertical|center_horizontal"
                 android:paddingBottom="20dp"
                 android:paddingTop="20dp"
                 android:textColor="@color/black_light"
                 android:textSize="14sp"
-                app:layout_widthPercent="50%" />
+                app:layout_widthPercent="100%" />
 
         </android.support.percent.PercentRelativeLayout>
 

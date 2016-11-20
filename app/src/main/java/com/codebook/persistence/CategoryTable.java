@@ -1,7 +1,7 @@
 package com.codebook.persistence;
 
 /**
- * Created by Narayan Acharya on 30/09/2015.
+ * Created by Archish on 30/09/2015.
  */
 public interface CategoryTable {
     String NAME = "category";

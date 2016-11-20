@@ -20,7 +20,7 @@ import java.util.ArrayList;
 
 
 /**
- * Created by Narayan Acharya on 01/11/2015.
+ * Created by Archish on 01/11/2015.
  */
 public class GamePlayActivity extends AppCompatActivity implements QuestionAdapter.AdapterActivityInterface {
 
@@ -85,7 +85,6 @@ public class GamePlayActivity extends AppCompatActivity implements QuestionAdapt
         sp.removePreference();
 
     }
-
     private int getMaxAttempts(ArrayList<Answer> answers) {
         int max = 0;
         for (int i = 0; i < answers.size(); i++) {

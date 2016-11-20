@@ -32,13 +32,7 @@
             android:textColor="@color/text_color"
             android:textSize="48sp" />
 
-        <TextView
-            android:id="@+id/tvLevelId"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="1"
-            android:textColor="@color/text_color"
-            android:textSize="96sp" />
+
     </LinearLayout>
 
     <LinearLayout

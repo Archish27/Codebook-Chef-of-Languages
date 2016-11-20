@@ -67,6 +67,9 @@ public class SelectActivity extends AppCompatActivity implements LevelFragment.L
                     categoryIcon.setBackgroundResource(R.drawable.java);
                     scrollView.setBackgroundResource(R.drawable.economics_bg);
                     break;
+                case 4:
+                    categoryIcon.setBackgroundResource(R.drawable.php);
+                    scrollView.setBackgroundResource(R.drawable.literature_bg);
 
             }
             attachLevelsFragment(category);

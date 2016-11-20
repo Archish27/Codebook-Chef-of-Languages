@@ -1,5 +1,6 @@
 package com.codebook.activity;
 
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -7,7 +8,10 @@ import android.util.Log;
 import com.codebook.R;
 import com.codebook.fragments.CategoryFragment;
 import com.codebook.models.Category;
+import com.codebook.models.Question;
+import com.codebook.persistence.CategoryTable;
 import com.codebook.persistence.DatabaseHelper;
+import com.codebook.persistence.QuestionTable;
 
 import java.util.ArrayList;
 
@@ -28,7 +32,7 @@ public class CategoryActivity extends AppCompatActivity {
         databaseHelper = DatabaseHelper.getDbInstance(this);
         //AsyncGetCategories getCategories = new AsyncGetCategories(this);
         //getCategories.execute();
-
+//                databaseHelper.printTableContent(databaseHelper.getWritableDatabase(), CategoryTable.NAME);
         /*
         List<AsyncRandomQuestions> getRandomQuestions = new ArrayList<>();
         for (int i = 0; i < 3; i++) {

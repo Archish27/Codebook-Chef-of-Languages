@@ -16,7 +16,7 @@ import java.util.Random;
 
 
 /**
- * Created by Narayan Acharya on 31/10/2015.
+ * Created by Archish on 31/10/2015.
  */
 public class Board extends View {
     private static final String TAG = "Board";

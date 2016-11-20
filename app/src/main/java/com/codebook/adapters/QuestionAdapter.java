@@ -13,6 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.codebook.R;
@@ -70,6 +71,7 @@ public class QuestionAdapter extends BaseAdapter {
             convertView = layoutInflater.inflate(R.layout.adapter_question, parent, false);
             questionHolder = new QuestionHolder();
             questionHolder.tvQuestionText = (TextView) convertView.findViewById(R.id.tvQuestionText);
+            questionHolder.questionLayout = (LinearLayout) convertView.findViewById(R.id.questionsLayout);
             questionHolder.tvPrgmText = (TextView) convertView.findViewById(R.id.tvPrgmText);
             questionHolder.tvOptionA = (TextView) convertView.findViewById(R.id.tvOptionA);
             questionHolder.tvOptionB = (TextView) convertView.findViewById(R.id.tvOptionB);
@@ -201,18 +203,22 @@ public class QuestionAdapter extends BaseAdapter {
         TextView tvOptionB;
         TextView tvOptionC;
         TextView tvOptionD;
+        LinearLayout questionLayout;
     }
 
     private void setupQuestionContent(QuestionHolder questionHolder, Question question) {
         PrettifyHighlighter highlighter = new PrettifyHighlighter();
-        String text = highlighter.highlight("java",question.getPrgmText());
-        questionHolder.tvPrgmText.setTextColor(Color.parseColor("#ffffff"));
-        questionHolder.tvQuestionText.setTextColor(Color.parseColor("#ffffff"));
+        String text = highlighter.highlight("java", question.getPrgmText());
         questionHolder.tvQuestionText.setText(escapeJavaString(question.getQuestionText()));
+        if (question.getPrgmText().equals("")) {
+            questionHolder.tvPrgmText.setVisibility(View.GONE);
+            float scale = context.getResources().getDisplayMetrics().density;
+            int dpAsPixels = (int) (40 * scale + 0.5f);
+            questionHolder.questionLayout.setPadding(dpAsPixels, dpAsPixels, dpAsPixels, dpAsPixels);
+
+        }
         questionHolder.tvPrgmText.setText(escapeJavaString(question.getPrgmText()));
 
-        questionHolder.tvPrgmText.setBackgroundColor(Color.parseColor("#212121"));
-        questionHolder.tvQuestionText.setBackgroundColor(Color.parseColor("#212121"));
         questionHolder.tvPrgmText.setMovementMethod(new ScrollingMovementMethod());
         questionHolder.tvOptionA.setText(question.getOptA());
         questionHolder.tvOptionB.setText(question.getOptB());
@@ -228,6 +234,7 @@ public class QuestionAdapter extends BaseAdapter {
         questionHolder.tvOptionC.setTypeface(CustomFontLoader.getTypeface(context, CustomFontLoader.QUICKSAND_BOLD));
         questionHolder.tvOptionD.setTypeface(CustomFontLoader.getTypeface(context, CustomFontLoader.QUICKSAND_BOLD));
     }
+
     public String escapeJavaString(String st) {
 
         StringBuilder sb = new StringBuilder(st.length());
@@ -298,6 +305,7 @@ public class QuestionAdapter extends BaseAdapter {
         }
         return sb.toString();
     }
+
     private void playMusic(boolean right) {
         if (mediaPlayer != null) {
             mediaPlayer.release();

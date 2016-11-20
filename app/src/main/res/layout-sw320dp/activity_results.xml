@@ -125,11 +125,6 @@
         </LinearLayout>
     </LinearLayout>
 
-    <com.github.mikephil.charting.charts.LineChart
-        android:id="@+id/lineChart"
-        android:layout_width="fill_parent"
-        android:layout_height="164dp"
-        android:layout_margin="10dp" />
 
 
     <RelativeLayout

@@ -59,6 +59,10 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Vertic
                 itemHolder.setCategoryIcon(R.drawable.java);
                 itemHolder.setCategoryBackground(R.drawable.economics_bg);
                 break;
+            case 4:
+                itemHolder.setCategoryIcon(R.drawable.php);
+                itemHolder.setCategoryBackground(R.drawable.literature_bg);
+                break;
 
         }
     }

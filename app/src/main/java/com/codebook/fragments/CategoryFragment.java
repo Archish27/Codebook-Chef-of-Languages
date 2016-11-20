@@ -19,7 +19,7 @@ import com.codebook.views.InsetDecoration;
 import java.util.ArrayList;
 
 /**
- * Created by Narayan Acharya on 30/10/2015.
+ * Created by Archish on 30/10/2015.
  */
 public class CategoryFragment extends RecyclerFragment {
 

@@ -4,7 +4,7 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 /**
- * Created by Narayan Acharya on 30/10/2015.
+ * Created by Archish on 30/10/2015.
  */
 public class Category implements Parcelable {
     public static final String TAG = "Category";

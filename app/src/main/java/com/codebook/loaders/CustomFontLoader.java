@@ -4,7 +4,7 @@ import android.content.Context;
 import android.graphics.Typeface;
 
 /**
- * Created by Narayan Acharya on 16/11/2015.
+ * Created by Archish on 16/11/2015.
  */
 public class CustomFontLoader {
 

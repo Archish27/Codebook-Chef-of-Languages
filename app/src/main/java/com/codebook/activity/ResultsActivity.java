@@ -31,7 +31,7 @@ import java.util.Date;
 
 
 /**
- * Created by Narayan Acharya on 02/11/2015.
+ * Created by Archish on 02/11/2015.
  */
 public class ResultsActivity extends AppCompatActivity {
 
@@ -71,7 +71,7 @@ public class ResultsActivity extends AppCompatActivity {
         Score newScore = new Score(answers.get(0).getCatId(), answers.get(0).getLevelId(), points, 1);
         db.setPointsCount(newScore);
 
-        lineChart = (LineChart) findViewById(R.id.lineChart);
+/*        lineChart = (LineChart) findViewById(R.id.lineChart);
         lineChart.setDescription("");
         lineChart.setDrawGridBackground(false);
         lineChart.getLegend().setEnabled(false);
@@ -103,7 +103,7 @@ public class ResultsActivity extends AppCompatActivity {
             } else {
                 allCorrect = false;
             }
-        }
+        }*/
         if (allCorrect) {
             db.unlockNextLevel(answers.get(0).getCatId(), answers.get(0).getLevelId());
         }
@@ -116,7 +116,7 @@ public class ResultsActivity extends AppCompatActivity {
         correctValue.setText(corrected + "/" + attempted);
         timerValue.setText(time / 1000 + "s");
 
-        LineDataSet lineDataSetCorrect = new LineDataSet(yValsCorrect, "");
+   /*     LineDataSet lineDataSetCorrect = new LineDataSet(yValsCorrect, "");
         lineDataSetCorrect.setColor(ContextCompat.getColor(this, R.color.text_color));
         lineDataSetCorrect.setCircleColor(ContextCompat.getColor(this, R.color.text_color));
         lineDataSetCorrect.setDrawCircleHole(true);
@@ -127,7 +127,7 @@ public class ResultsActivity extends AppCompatActivity {
         ArrayList<LineDataSet> dataSets = new ArrayList<>();
         dataSets.add(lineDataSetCorrect);
         LineData lineData = new LineData(xVals, dataSets);
-        lineChart.setData(lineData);
+        lineChart.setData(lineData);*/
 
         if (points >= 2500) {
             tvScoreMessage.setText("Excellent!");
